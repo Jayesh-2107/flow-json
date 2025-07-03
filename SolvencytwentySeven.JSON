@@ -1,8 +1,15 @@
 {
   "version": "7.0",
   "routing_model": {
-    "WELCOME": ["BENEFICIARY", "DETAILED", "UPLOAD_DOCUMENTS"],
-    "BENEFICIARY": ["DETAILED", "UPLOAD_DOCUMENTS"],
+    "WELCOME": [
+      "BENEFICIARY",
+      "DETAILED",
+      "UPLOAD_DOCUMENTS"
+    ],
+    "BENEFICIARY": [
+      "DETAILED",
+      "UPLOAD_DOCUMENTS"
+    ],
     "DETAILED": []
   },
   "data_api_version": "3.0",
@@ -1935,7 +1942,9 @@
           "items": {
             "type": "string"
           },
-          "__example__": ["**Text Body Literal Amount**"]
+          "__example__": [
+            "**Text Body Literal Amount**"
+          ]
         },
         "VisibilityTextBodyLiteralAmount": {
           "type": "boolean",
@@ -2648,6 +2657,79 @@
                 "onSelectAction": "applicant-relationship"
               }
             },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": false,
+                "VisibilityBeneficiarySalutation": false,
+                "VisibilityBeneficiaryFullNameEnglish": false,
+                "VisibilityBeneficiaryFullNameMarathi": false,
+                "VisibilityBeneficiarysDateOfBirth": false,
+                "VisibilityBeeficiaryMobileNumber": false,
+                "VisibilityEmailId": false,
+                "VisibilityBeneficiaryAadharNumber": false,
+                "VisibilityBeneficiaryApplicantNationality": false,
+                "VisibilityBeneficiarysGender": false,
+                "VisibilityBeneficiaryResidenceHeadiing": false,
+                "VisibilityBeneficiaryRAddress": false,
+                "VisibilityBeneficiaryRBuilding": false,
+                "VisibilityBeneficiarySection": false,
+                "VisibilitybeneficiaryStreet": false,
+                "VisibilitybeneficiaryLandmark": false,
+                "VisibilitybeneficiaryDistrict": false,
+                "VisibilityBeneficiaryRTaluka": false,
+                "VisibilityBeneficiaryVillage": false,
+                "VisibilityBeneficiaryPinCode": false,
+                "VisibilityCreaditCertificateDetails": false,
+                "VisibilityPurposeOfApplyingForCredit": false,
+                "VisibilityAmmountOfCreditApplied": false,
+                "VisibilityTextBodyLiteralAmount": false,
+                "VisibilityHeadingPropertyDetails": false,
+                "VisibilityPropertyCategory": false,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
+              }
+            },
             "type": "Dropdown"
           },
           {
@@ -2713,6 +2795,79 @@
                 "OReasonForTheEstimateValue": "${form.OReasonForTheEstimateValue}",
                 "OApproval": "${form.OApproval}",
                 "onSelectAction": "salutation"
+              }
+            },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": false,
+                "VisibilityBeneficiaryFullNameMarathi": false,
+                "VisibilityBeneficiarysDateOfBirth": false,
+                "VisibilityBeeficiaryMobileNumber": false,
+                "VisibilityEmailId": false,
+                "VisibilityBeneficiaryAadharNumber": false,
+                "VisibilityBeneficiaryApplicantNationality": false,
+                "VisibilityBeneficiarysGender": false,
+                "VisibilityBeneficiaryResidenceHeadiing": false,
+                "VisibilityBeneficiaryRAddress": false,
+                "VisibilityBeneficiaryRBuilding": false,
+                "VisibilityBeneficiarySection": false,
+                "VisibilitybeneficiaryStreet": false,
+                "VisibilitybeneficiaryLandmark": false,
+                "VisibilitybeneficiaryDistrict": false,
+                "VisibilityBeneficiaryRTaluka": false,
+                "VisibilityBeneficiaryVillage": false,
+                "VisibilityBeneficiaryPinCode": false,
+                "VisibilityCreaditCertificateDetails": false,
+                "VisibilityPurposeOfApplyingForCredit": false,
+                "VisibilityAmmountOfCreditApplied": false,
+                "VisibilityTextBodyLiteralAmount": false,
+                "VisibilityHeadingPropertyDetails": false,
+                "VisibilityPropertyCategory": false,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
               }
             },
             "type": "Dropdown"
@@ -2924,6 +3079,79 @@
                 "onSelectAction": "beneficiary-district"
               }
             },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": true,
+                "VisibilityBeneficiaryFullNameMarathi": true,
+                "VisibilityBeneficiarysDateOfBirth": true,
+                "VisibilityBeeficiaryMobileNumber": true,
+                "VisibilityEmailId": true,
+                "VisibilityBeneficiaryAadharNumber": true,
+                "VisibilityBeneficiaryApplicantNationality": true,
+                "VisibilityBeneficiarysGender": true,
+                "VisibilityBeneficiaryResidenceHeadiing": true,
+                "VisibilityBeneficiaryRAddress": true,
+                "VisibilityBeneficiaryRBuilding": true,
+                "VisibilityBeneficiarySection": true,
+                "VisibilitybeneficiaryStreet": true,
+                "VisibilitybeneficiaryLandmark": true,
+                "VisibilitybeneficiaryDistrict": true,
+                "VisibilityBeneficiaryRTaluka": false,
+                "VisibilityBeneficiaryVillage": false,
+                "VisibilityBeneficiaryPinCode": false,
+                "VisibilityCreaditCertificateDetails": false,
+                "VisibilityPurposeOfApplyingForCredit": false,
+                "VisibilityAmmountOfCreditApplied": false,
+                "VisibilityTextBodyLiteralAmount": false,
+                "VisibilityHeadingPropertyDetails": false,
+                "VisibilityPropertyCategory": false,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
+              }
+            },
             "type": "Dropdown"
           },
           {
@@ -2983,6 +3211,79 @@
                 "OReasonForTheEstimateValue": "${form.OReasonForTheEstimateValue}",
                 "OApproval": "${form.OApproval}",
                 "onSelectAction": "beneficiary-Taluka"
+              }
+            },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": true,
+                "VisibilityBeneficiaryFullNameMarathi": true,
+                "VisibilityBeneficiarysDateOfBirth": true,
+                "VisibilityBeeficiaryMobileNumber": true,
+                "VisibilityEmailId": true,
+                "VisibilityBeneficiaryAadharNumber": true,
+                "VisibilityBeneficiaryApplicantNationality": true,
+                "VisibilityBeneficiarysGender": true,
+                "VisibilityBeneficiaryResidenceHeadiing": true,
+                "VisibilityBeneficiaryRAddress": true,
+                "VisibilityBeneficiaryRBuilding": true,
+                "VisibilityBeneficiarySection": true,
+                "VisibilitybeneficiaryStreet": true,
+                "VisibilitybeneficiaryLandmark": true,
+                "VisibilitybeneficiaryDistrict": true,
+                "VisibilityBeneficiaryRTaluka": true,
+                "VisibilityBeneficiaryVillage": false,
+                "VisibilityBeneficiaryPinCode": false,
+                "VisibilityCreaditCertificateDetails": false,
+                "VisibilityPurposeOfApplyingForCredit": false,
+                "VisibilityAmmountOfCreditApplied": false,
+                "VisibilityTextBodyLiteralAmount": false,
+                "VisibilityHeadingPropertyDetails": false,
+                "VisibilityPropertyCategory": false,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
               }
             },
             "visible": "${data.VisibilityBeneficiaryRTaluka}",
@@ -3046,6 +3347,79 @@
                 "OReasonForTheEstimateValue": "${form.OReasonForTheEstimateValue}",
                 "OApproval": "${form.OApproval}",
                 "onSelectAction": "beneficiary-village"
+              }
+            },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": true,
+                "VisibilityBeneficiaryFullNameMarathi": true,
+                "VisibilityBeneficiarysDateOfBirth": true,
+                "VisibilityBeeficiaryMobileNumber": true,
+                "VisibilityEmailId": true,
+                "VisibilityBeneficiaryAadharNumber": true,
+                "VisibilityBeneficiaryApplicantNationality": true,
+                "VisibilityBeneficiarysGender": true,
+                "VisibilityBeneficiaryResidenceHeadiing": true,
+                "VisibilityBeneficiaryRAddress": true,
+                "VisibilityBeneficiaryRBuilding": true,
+                "VisibilityBeneficiarySection": true,
+                "VisibilitybeneficiaryStreet": true,
+                "VisibilitybeneficiaryLandmark": true,
+                "VisibilitybeneficiaryDistrict": true,
+                "VisibilityBeneficiaryRTaluka": true,
+                "VisibilityBeneficiaryVillage": true,
+                "VisibilityBeneficiaryPinCode": true,
+                "VisibilityCreaditCertificateDetails": false,
+                "VisibilityPurposeOfApplyingForCredit": false,
+                "VisibilityAmmountOfCreditApplied": false,
+                "VisibilityTextBodyLiteralAmount": false,
+                "VisibilityHeadingPropertyDetails": false,
+                "VisibilityPropertyCategory": false,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
               }
             },
             "type": "Dropdown"
@@ -3155,6 +3529,79 @@
                 "onSelectAction": "property-category"
               }
             },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": true,
+                "VisibilityBeneficiaryFullNameMarathi": true,
+                "VisibilityBeneficiarysDateOfBirth": true,
+                "VisibilityBeeficiaryMobileNumber": true,
+                "VisibilityEmailId": true,
+                "VisibilityBeneficiaryAadharNumber": true,
+                "VisibilityBeneficiaryApplicantNationality": true,
+                "VisibilityBeneficiarysGender": true,
+                "VisibilityBeneficiaryResidenceHeadiing": true,
+                "VisibilityBeneficiaryRAddress": true,
+                "VisibilityBeneficiaryRBuilding": true,
+                "VisibilityBeneficiarySection": true,
+                "VisibilitybeneficiaryStreet": true,
+                "VisibilitybeneficiaryLandmark": true,
+                "VisibilitybeneficiaryDistrict": true,
+                "VisibilityBeneficiaryRTaluka": true,
+                "VisibilityBeneficiaryVillage": true,
+                "VisibilityBeneficiaryPinCode": true,
+                "VisibilityCreaditCertificateDetails": true,
+                "VisibilityPurposeOfApplyingForCredit": true,
+                "VisibilityAmmountOfCreditApplied": true,
+                "VisibilityTextBodyLiteralAmount": true,
+                "VisibilityHeadingPropertyDetails": true,
+                "VisibilityPropertyCategory": true,
+                "VisibilitySubCategory": false,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
+              }
+            },
             "type": "Dropdown"
           },
           {
@@ -3215,6 +3662,79 @@
                 "OReasonForTheEstimateValue": "${form.OReasonForTheEstimateValue}",
                 "OApproval": "${form.OApproval}",
                 "onSelectAction": "sub-category"
+              }
+            },
+            "on-unselect-action": {
+              "name": "update_data",
+              "payload": {
+                "VisibilityBeneficiarysPersonalDetails": true,
+                "VisibilityBeneficiarySalutation": true,
+                "VisibilityBeneficiaryFullNameEnglish": true,
+                "VisibilityBeneficiaryFullNameMarathi": true,
+                "VisibilityBeneficiarysDateOfBirth": true,
+                "VisibilityBeeficiaryMobileNumber": true,
+                "VisibilityEmailId": true,
+                "VisibilityBeneficiaryAadharNumber": true,
+                "VisibilityBeneficiaryApplicantNationality": true,
+                "VisibilityBeneficiarysGender": true,
+                "VisibilityBeneficiaryResidenceHeadiing": true,
+                "VisibilityBeneficiaryRAddress": true,
+                "VisibilityBeneficiaryRBuilding": true,
+                "VisibilityBeneficiarySection": true,
+                "VisibilitybeneficiaryStreet": true,
+                "VisibilitybeneficiaryLandmark": true,
+                "VisibilitybeneficiaryDistrict": true,
+                "VisibilityBeneficiaryRTaluka": true,
+                "VisibilityBeneficiaryVillage": true,
+                "VisibilityBeneficiaryPinCode": true,
+                "VisibilityCreaditCertificateDetails": true,
+                "VisibilityPurposeOfApplyingForCredit": true,
+                "VisibilityAmmountOfCreditApplied": true,
+                "VisibilityTextBodyLiteralAmount": true,
+                "VisibilityHeadingPropertyDetails": true,
+                "VisibilityPropertyCategory": true,
+                "VisibilitySubCategory": true,
+                "VisibilityPurchasePrice": false,
+                "VisibilityTodaysPriceAccMarketPrice": false,
+                "VisibilityShare": false,
+                "VisibilityCoOwnersSalutation": false,
+                "VisibilityCoOwnersName": false,
+                "VisibilityCoOwnersAddress": false,
+                "VisibilityEmbdConfirmShareDetails": false,
+                "VisibilityHeadingDetailedpropertydetails": false,
+                "VisibilitySubApplicantDetails": false,
+                "VisibilitySampleNo": false,
+                "VisibilityPrintName": false,
+                "VisibilityPurchasePriceColdPlate": false,
+                "VisibilitySellingPrice": false,
+                "VisibilityDomesticMatterDetails": false,
+                "VisibilityAmountCash": false,
+                "VisibilitySampleNoTelevision": false,
+                "VisibilityPrintNameTelevision": false,
+                "VisibilityPurchasePriceTelevision": false,
+                "VisibilitySellingPriceTelevision": false,
+                "VisibilityLivestocketails": false,
+                "VisibilityWoodAccessoriesJoinery": false,
+                "VisibilityJewelryGoldWeight": false,
+                "VisibilityJewelryGoldWeightUnit": false,
+                "VisibilityJewelryGoldWeightAmount": false,
+                "VisibilityOtherDetailsProperty": false,
+                "VisibilitySampleNoWashingMatchine": false,
+                "VisibilityPrintNameWashingMachine": false,
+                "VisibilityPurchasePriceWashingMachine": false,
+                "VisibilitySellingPriceWashingMachine": false,
+                "VisibilitySampleNoVehicles": false,
+                "VisibilityPrintNameVehicles": false,
+                "VisibilityPurchasePriceVehicles": false,
+                "VisibilitySellingPriceVehicles": false,
+                "VisibilityHeadingAffidavit": false,
+                "VisibilityWellnessFullname": false,
+                "VisibilityWitnessFullName": false,
+                "VisibilityWitnessFullAddress": false,
+                "VisibilityReasonForTheEstimateValue": false,
+                "VisibilityApproval": false,
+                "VisibilityConfirmDetails": false,
+                "VisibilityErrorMessageFromProcesss": false
               }
             },
             "type": "Dropdown"
@@ -4926,6 +5446,17 @@
                       "onSelectAction": "unit-unit"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyPropertyDistrict": false,
+                      "VisibilityPropertyTaluka": false,
+                      "VisibiltyPropertyVillage": false,
+                      "VisibiltyPricingDetails": false,
+                      "VisibilitySoleProprietor": false,
+                      "VisibilityJointHinduProperthy": false
+                    }
+                  },
                   "required": true,
                   "visible": "${data.VisibilityUnit}",
                   "type": "Dropdown"
@@ -4998,6 +5529,17 @@
                       "OSoleProprietor": "${form.OSoleProprietor}",
                       "OJointHinduProperty": "${form.OJointHinduProperty}",
                       "onSelectAction": "property-district"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyPropertyDistrict": true,
+                      "VisibilityPropertyTaluka": false,
+                      "VisibiltyPropertyVillage": false,
+                      "VisibiltyPricingDetails": false,
+                      "VisibilitySoleProprietor": false,
+                      "VisibilityJointHinduProperthy": false
                     }
                   },
                   "visible": "${data.VisibiltyPropertyDistrict}",
@@ -5073,6 +5615,17 @@
                       "onSelectAction": "property-taluka"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyPropertyDistrict": true,
+                      "VisibilityPropertyTaluka": true,
+                      "VisibiltyPropertyVillage": false,
+                      "VisibiltyPricingDetails": false,
+                      "VisibilitySoleProprietor": false,
+                      "VisibilityJointHinduProperthy": false
+                    }
+                  },
                   "visible": "${data.VisibilityPropertyTaluka}",
                   "type": "Dropdown"
                 },
@@ -5144,6 +5697,17 @@
                       "OSoleProprietor": "${form.OSoleProprietor}",
                       "OJointHinduProperty": "${form.OJointHinduProperty}",
                       "onSelectAction": "property-village"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyPropertyDistrict": true,
+                      "VisibilityPropertyTaluka": true,
+                      "VisibiltyPropertyVillage": true,
+                      "VisibiltyPricingDetails": false,
+                      "VisibilitySoleProprietor": false,
+                      "VisibilityJointHinduProperthy": false
                     }
                   },
                   "visible": "${data.VisibiltyPropertyVillage}",
@@ -5312,6 +5876,16 @@
                       "onSelectAction": "District-Details-Bungalow"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityDistrictDetailsBungalow": true,
+                      "VisibilityTalukaDetailsBungalow": false,
+                      "VisibilityVillageDetailsBungalow": false,
+                      "VisibilityBusinessOwnershipInfoDetailsBungalow": false,
+                      "VisibiltyjointHinduPropertyDetailsBungalow": false
+                    }
+                  },
                   "type": "Dropdown"
                 },
                 {
@@ -5345,6 +5919,16 @@
                       "ODistrictDetailsBungalow": "${form.ODistrictDetailsBungalow}",
                       "OTalukaDetailsBungalow": "${form.OTalukaDetailsBungalow}",
                       "onSelectAction": "Taluka-Details-Bungalow"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityDistrictDetailsBungalow": true,
+                      "VisibilityTalukaDetailsBungalow": true,
+                      "VisibilityVillageDetailsBungalow": false,
+                      "VisibilityBusinessOwnershipInfoDetailsBungalow": false,
+                      "VisibiltyjointHinduPropertyDetailsBungalow": false
                     }
                   },
                   "type": "Dropdown"
@@ -5381,6 +5965,16 @@
                       "OTalukaDetailsBungalow": "${form.OTalukaDetailsBungalow}",
                       "OVillageDetailsBungalow": "${form.OVillageDetailsBungalow}",
                       "onSelectAction": "Village-Details-Bungalow"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityDistrictDetailsBungalow": true,
+                      "VisibilityTalukaDetailsBungalow": true,
+                      "VisibilityVillageDetailsBungalow": true,
+                      "VisibilityBusinessOwnershipInfoDetailsBungalow": false,
+                      "VisibiltyjointHinduPropertyDetailsBungalow": false
                     }
                   },
                   "type": "Dropdown"
@@ -5452,6 +6046,15 @@
                       "onSelectAction": "Unit-Shop"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyLocationShop": false,
+                      "VisibilityDistrictShop": false,
+                      "VisibilityTalukaShop": false,
+                      "VisibilityVillageShop": false
+                    }
+                  },
                   "type": "Dropdown"
                 },
                 {
@@ -5496,6 +6099,15 @@
                       "onSelectAction": "District-Shop"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyLocationShop": true,
+                      "VisibilityDistrictShop": true,
+                      "VisibilityTalukaShop": false,
+                      "VisibilityVillageShop": false
+                    }
+                  },
                   "type": "Dropdown"
                 },
                 {
@@ -5533,6 +6145,15 @@
                       "ODistrictShop": "${form.ODistrictShop}",
                       "OTalukaShop": "${form.OTalukaShop}",
                       "onSelectAction": "Taluka-Shop"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyLocationShop": true,
+                      "VisibilityDistrictShop": true,
+                      "VisibilityTalukaShop": true,
+                      "VisibilityVillageShop": false
                     }
                   },
                   "type": "Dropdown"
@@ -5573,6 +6194,15 @@
                       "OTalukaShop": "${form.OTalukaShop}",
                       "OVillageShop": "${form.OVillageShop}",
                       "onSelectAction": "Village-Shop"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibiltyLocationShop": true,
+                      "VisibilityDistrictShop": true,
+                      "VisibilityTalukaShop": true,
+                      "VisibilityVillageShop": true
                     }
                   },
                   "type": "Dropdown"
@@ -5653,6 +6283,15 @@
                       "onSelectAction": "District-Land"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityTalukaLand": false,
+                      "VisibilityVillageLand": false,
+                      "VisibilityBusinessOwnershipInfoLand": false,
+                      "VisibiltyjointHinduPropertyLand": false
+                    }
+                  },
                   "type": "Dropdown"
                 },
                 {
@@ -5695,6 +6334,15 @@
                       "onSelectAction": "Taluka-Land"
                     }
                   },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityTalukaLand": true,
+                      "VisibilityVillageLand": false,
+                      "VisibilityBusinessOwnershipInfoLand": false,
+                      "VisibiltyjointHinduPropertyLand": false
+                    }
+                  },
                   "type": "Dropdown"
                 },
                 {
@@ -5732,6 +6380,15 @@
                       "OVillageLand": "${form.OVillageLand}",
                       "OVillageDetailsBungalow": "${form.OVillageDetailsBungalow}",
                       "onSelectAction": "Village-Land"
+                    }
+                  },
+                  "on-unselect-action": {
+                    "name": "update_data",
+                    "payload": {
+                      "VisibilityTalukaLand": true,
+                      "VisibilityVillageLand": true,
+                      "VisibilityBusinessOwnershipInfoLand": false,
+                      "VisibiltyjointHinduPropertyLand": false
                     }
                   },
                   "type": "Dropdown"
@@ -6480,7 +7137,9 @@
           "items": {
             "type": "string"
           },
-          "__example__": ["**Instruction for uploading Photo**"]
+          "__example__": [
+            "**Instruction for uploading Photo**"
+          ]
         },
         "OIncomeProof": {
           "type": "string",
@@ -6507,7 +7166,9 @@
                   "max-file-size-kb": 500,
                   "label": "${data.LabelPhoto}",
                   "name": "OPhotoDocument",
-                  "allowed-mime-types": ["image/jpeg"],
+                  "allowed-mime-types": [
+                    "image/jpeg"
+                  ],
                   "min-uploaded-documents": 1,
                   "max-uploaded-documents": 1,
                   "type": "DocumentPicker"
@@ -6566,7 +7227,10 @@
                   "max-file-size-kb": 500,
                   "label": "${data.LabelIdentityProofDocument}",
                   "name": "OIdentityProofDocument",
-                  "allowed-mime-types": ["application/pdf", "image/jpeg"],
+                  "allowed-mime-types": [
+                    "application/pdf",
+                    "image/jpeg"
+                  ],
                   "min-uploaded-documents": 1,
                   "max-uploaded-documents": 1,
                   "visible": "${data.VisibilityIdentityProofDocument}",
@@ -6627,7 +7291,10 @@
                   "max-file-size-kb": 500,
                   "label": "${data.LabelAddressProofDocument}",
                   "name": "OAddressProofDocument",
-                  "allowed-mime-types": ["application/pdf", "image/jpeg"],
+                  "allowed-mime-types": [
+                    "application/pdf",
+                    "image/jpeg"
+                  ],
                   "min-uploaded-documents": 1,
                   "max-uploaded-documents": 1,
                   "visible": "${data.VisibilityAddressProofDocument}",
@@ -6690,7 +7357,10 @@
                   "max-file-size-kb": 500,
                   "label": "${data.LabelOtherDocumentsDC}",
                   "name": "OOtherDocumentsDC",
-                  "allowed-mime-types": ["application/pdf", "image/jpeg"],
+                  "allowed-mime-types": [
+                    "application/pdf",
+                    "image/jpeg"
+                  ],
                   "min-uploaded-documents": 1,
                   "max-uploaded-documents": 1,
                   "visible": "${data.VisibilityOtherDocumentsDC}",
@@ -6752,7 +7422,10 @@
                   "max-file-size-kb": 500,
                   "label": "${data.LabelselfDeclarationDoc}",
                   "name": "ODPMandatoryDocument",
-                  "allowed-mime-types": ["application/pdf", "image/jpeg"],
+                  "allowed-mime-types": [
+                    "application/pdf",
+                    "image/jpeg"
+                  ],
                   "min-uploaded-documents": 1,
                   "max-uploaded-documents": 1,
                   "visible": "${data.VisibilitySelfDeclareDocument}",

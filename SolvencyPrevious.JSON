@@ -1,13 +1,7 @@
 {
     "version": "7.0",
     "routing_model": {
-        "APPLICANT": [
-            "APPLICANT_ADDRESS",
-            "BENEFICIARY",
-            "DETAILED",
-            "UPLOAD_DOCUMENTS"
-        ],
-        "APPLICANT_ADDRESS": [
+        "WELCOME": [
             "BENEFICIARY",
             "DETAILED",
             "UPLOAD_DOCUMENTS"
@@ -22,13 +16,53 @@
     "screens": [
         {
             "data": {
-                "headingSolvencyName": {
+                "screenName": {
                     "type": "string",
-                    "__example__": "Solvency Certificate"
+                    "__example__": "WELCOME"
                 },
-                "LabelSalutationName": {
+                "LabelFirstDropdown": {
                     "type": "string",
-                    "__example__": "Salutation"
+                    "__example__": "Income Year"
+                },
+                "ListFirstDropdown": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "For 3 Year",
+                            "title": "For 3 Year"
+                        }
+                    ]
+                },
+                "VisibilityApplicantName": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "RequiredApplicantName": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledApplicantName": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelApplicantDetailsHeading": {
+                    "type": "string",
+                    "__example__": "Applicant Detail"
+                },
+                "VisibilityApplicantDetails": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "ListSalutation": {
                     "type": "array",
@@ -45,34 +79,50 @@
                     },
                     "__example__": [
                         {
-                            "id": "Salutation Id",
-                            "title": "salutation One"
-                        },
-                        {
-                            "id": "Salutation 2",
-                            "title": "Salutation 2"
-                        },
-                        {
-                            "id": "Salutation 3",
-                            "title": "Salutation 3"
+                            "id": "Mr.",
+                            "title": "Mr."
                         }
                     ]
                 },
-                "InitFullNameEnglish": {
-                    "type": "string",
-                    "__example__": "Jayesh Nandurkar"
-                },
-                "VisibilityFullName": {
+                "RequiredSalutation": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
+                },
+                "VisibilitySalutation": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledSalutation": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "RequiredFullNameEnglish": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityFullNameEnglish": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelFullNameMarathi": {
+                    "type": "string",
+                    "__example__": "LabelFullNameMarathi"
                 },
                 "InitFullNameMarathi": {
                     "type": "string",
-                    "__example__": "जयेश नंदुरकर"
+                    "__example__": "FullNameMarathi"
                 },
-                "LabelFathersSalutation": {
+                "RequiredFullNameMarathi": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityFullNameMarathi": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelFatherSalutation": {
                     "type": "string",
-                    "__example__": "Father's Salutation"
+                    "__example__": "FatherSalutation"
                 },
                 "ListFatherSalutation": {
                     "type": "array",
@@ -89,50 +139,54 @@
                     },
                     "__example__": [
                         {
-                            "id": "1",
-                            "title": "Father Salutation 1"
-                        },
-                        {
-                            "id": "2",
-                            "title": "Father Salutation 2"
-                        },
-                        {
-                            "id": "3",
-                            "title": "Father Salutation 3"
+                            "id": "Shri.",
+                            "title": "Shri."
                         }
                     ]
                 },
-                "IsRequiredFathersName": {
+                "RequiredFatherSalutation": {
                     "type": "boolean",
                     "__example__": true
                 },
-                "LabelFullNameEnglish": {
-                    "type": "string",
-                    "__example__": "Full Name (English)"
-                },
-                "LabelFullNameMarathi": {
-                    "type": "string",
-                    "__example__": "Full Name (Marathi)"
-                },
-                "VisibilityFathersNameEnglish": {
+                "VisibilityFatherSalutation": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
                 },
-                "LabelFathersNameMarathi": {
-                    "type": "string",
-                    "__example__": "Fathers Name (Marathi)"
+                "EnabledFatherSalutation": {
+                    "type": "boolean",
+                    "__example__": true
                 },
-                "LabelFathersNameEnglish": {
+                "LabelFatherNameEnglish": {
                     "type": "string",
                     "__example__": "Father Name (English)"
                 },
-                "InitFathernameEnglish": {
+                "InitFatherNameEnglish": {
                     "type": "string",
-                    "__example__": "Father Name"
+                    "__example__": "InitFatherNameEnglish"
+                },
+                "RequiredFatherNameEnglish": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisiblityFatherNameEnglish": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelFatherNameMarathi": {
+                    "type": "string",
+                    "__example__": "Father Name (Marathi)"
                 },
                 "InitFatherNameMarathi": {
                     "type": "string",
-                    "__example__": "वडिलांचे नाव"
+                    "__example__": "FatherNameMarathi"
+                },
+                "RequiredFatherNameMarathi": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityFatherNameMarathi": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "LabelDateOfBirth": {
                     "type": "string",
@@ -140,15 +194,19 @@
                 },
                 "InitDateOfBirth": {
                     "type": "string",
-                    "__example__": "02/8/1964"
+                    "__example__": "2024/11/12"
                 },
-                "MinDateOfBirth": {
-                    "type": "string",
-                    "__example__": "02/05/1900"
+                "RequiredDateOfBirth": {
+                    "type": "boolean",
+                    "__example__": true
                 },
-                "MaxDateOfBirth": {
-                    "type": "string",
-                    "__example__": "2025/12/31"
+                "VisibilityDateOfBirth": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledDateOfBirth": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "LabelAge": {
                     "type": "string",
@@ -156,7 +214,15 @@
                 },
                 "InitAge": {
                     "type": "string",
-                    "__example__": "60"
+                    "__example__": "24"
+                },
+                "RequiredAge": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityAge": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "LabelMobileNumber": {
                     "type": "string",
@@ -164,7 +230,15 @@
                 },
                 "InitMobileNumber": {
                     "type": "string",
-                    "__example__": "9373820694"
+                    "__example__": "9284610199"
+                },
+                "RequiredMobileNumber": {
+                    "type": "boolean",
+                    "__example__": false
+                },
+                "VisibilityMobileNumber": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "LabelGender": {
                     "type": "string",
@@ -185,34 +259,42 @@
                     },
                     "__example__": [
                         {
-                            "id": "1",
+                            "id": "Male",
                             "title": "Male"
-                        },
-                        {
-                            "id": "2",
-                            "title": "Female"
-                        },
-                        {
-                            "id": "3",
-                            "title": "Others"
                         }
                     ]
                 },
-                "VisibilityMobileNumber": {
+                "initGender": {
+                    "type": "string",
+                    "__example__": "Male"
+                },
+                "RequiredGender": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
                 },
                 "VisibilityGender": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
                 },
-                "LabelEmail": {
+                "EnabledGender": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelEmailId": {
                     "type": "string",
-                    "__example__": "Jayesh@gmai.com"
+                    "__example__": "Email Id"
                 },
-                "VisibilityEmail": {
+                "RequiredEmailId": {
                     "type": "boolean",
                     "__example__": false
+                },
+                "VisibilityEmailId": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "initEmailId": {
+                    "type": "string",
+                    "__example__": "bot@pinnacle.in"
                 },
                 "LabelOccupation": {
                     "type": "string",
@@ -233,194 +315,689 @@
                     },
                     "__example__": [
                         {
-                            "id": "1",
-                            "title": "Farmer"
+                            "id": "Student",
+                            "title": "Student"
                         },
                         {
-                            "id": "2",
+                            "id": "Teacher",
                             "title": "Teacher"
-                        },
-                        {
-                            "id": "3",
-                            "title": "Work Less"
                         }
                     ]
                 },
-                "InitAdharNumber": {
+                "initOccupation": {
                     "type": "string",
-                    "__example__": "7412589633697"
+                    "__example__": "Student"
                 },
-                "VisibilityAdharNumber": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "LabelApplicantnationality": {
-                    "type": "string",
-                    "__example__": "Applicant Nationality"
-                },
-                "InitApplicantNationality": {
-                    "type": "string",
-                    "__example__": "भारतीय"
-                },
-                "VisibilityApplicantNationality": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "EmbededLinkForApplicantDetails": {
-                    "type": "string",
-                    "__example__": "Confirm Details"
-                },
-                "VisibilityEmbeddedLink": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "LabelFooterApplicantDetails": {
-                    "type": "string",
-                    "__example__": "Continue"
-                },
-                "EnableFooterApplicantDetails": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "VisibilitySalutation": {
+                "RequiredOccupation": {
                     "type": "boolean",
                     "__example__": true
                 },
-                "VisibilityFatherSalutation": {
+                "VisibilityOccupation": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
                 },
-                "VisibilityFatherNameMarathi": {
+                "EnabledOccupation": {
                     "type": "boolean",
-                    "__example__": false
+                    "__example__": true
                 },
-                "VisibilityAge": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "LabelAdharNumber": {
+                "LabelAadharAndNationality": {
                     "type": "string",
-                    "__example__": "Aadhar Number"
+                    "__example__": "Aadhar : XXXXXXXXXXXXXX\\nNationality : Indian"
+                },
+                "VisibilityAadharAndNationality": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelApplicantAddress": {
+                    "type": "string",
+                    "__example__": "Applicant Address"
+                },
+                "VisibilityApplicantAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelAddress": {
+                    "type": "string",
+                    "__example__": "Address"
+                },
+                "RequiredAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelBuilding": {
+                    "type": "string",
+                    "__example__": "Building"
+                },
+                "RequiredBuilding": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityBuilding": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelSection": {
+                    "type": "string",
+                    "__example__": "Section"
+                },
+                "RequiredSection": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilitySection": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelStreet": {
+                    "type": "string",
+                    "__example__": "Street"
+                },
+                "RequiredStreet": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityStreet": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelLandmark": {
+                    "type": "string",
+                    "__example__": "Landmark"
+                },
+                "RequiredLandmark": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityLandmark": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelDistrict": {
+                    "type": "string",
+                    "__example__": "District"
+                },
+                "ListDistrict": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Chandrapur",
+                            "title": "Chandrapur"
+                        }
+                    ]
+                },
+                "RequiredDistrict": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityDistrict": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledDistrict": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelTaluka": {
+                    "type": "string",
+                    "__example__": "Taluka"
+                },
+                "ListTaluka": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Chimur",
+                            "title": "Chimur"
+                        }
+                    ]
+                },
+                "RequiredTaluka": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilitryTaluka": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledTaluka": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelVillage": {
+                    "type": "string",
+                    "__example__": "Village"
+                },
+                "ListVillage": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Amarpur",
+                            "title": "Amarpur"
+                        }
+                    ]
+                },
+                "RequiredVillage": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibleVillage": {
+                    "type": "boolean",
+                    "__example__": false
+                },
+                "EnabledVillage": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPincode": {
+                    "type": "string",
+                    "__example__": "Pincode"
+                },
+                "RequiredPincode": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityPincode": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPanCardNo": {
+                    "type": "string",
+                    "__example__": "Pan Card No."
+                },
+                "RequiredPanCardNo": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisiblePanCardNo": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelFooter": {
+                    "type": "string",
+                    "__example__": "Continue"
+                },
+                "EnabledFooter": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelSalutation": {
+                    "type": "string",
+                    "__example__": "Salutation"
+                },
+                "LabelFullNameEnglish": {
+                    "type": "string",
+                    "__example__": "FullNameEnglish"
+                },
+                "LabelUserName": {
+                    "type": "string",
+                    "__example__": "User Name"
+                },
+                "LabelConfirmUserName": {
+                    "type": "string",
+                    "__example__": "Confirm User Name"
+                },
+                "InitFullNameEnglish": {
+                    "type": "string",
+                    "__example__": "InitFullNameEnglish"
+                },
+                "LabelSameAsPresentAddress": {
+                    "type": "string",
+                    "__example__": "Permanent Address"
+                },
+                "ListSameAsPermanentAddress": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Same as Permanent Address",
+                            "title": "Same as Permanent Address"
+                        }
+                    ]
+                },
+                "VisibleSameAsPermanentAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "RequiredSameAsPermanentAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentAddress": {
+                    "type": "string",
+                    "__example__": "Address"
+                },
+                "VisibilityPermanentAddress": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentBuilding": {
+                    "type": "string",
+                    "__example__": "Permanent Building"
+                },
+                "VisibilityPermanentBuilding": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentSection": {
+                    "type": "string",
+                    "__example__": "Section"
+                },
+                "VisibilityPermanentSection": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentStreet": {
+                    "type": "string",
+                    "__example__": "Street"
+                },
+                "VisibilityPermanentStreet": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentLandmark": {
+                    "type": "string",
+                    "__example__": "Landmark"
+                },
+                "VisibilityPermanentLandmark": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentDistrict": {
+                    "type": "string",
+                    "__example__": "District"
+                },
+                "ListPermanentDistrict": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "District 1",
+                            "title": "District 1"
+                        }
+                    ]
+                },
+                "VisibilityPermanentDistrict": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentTaluka": {
+                    "type": "string",
+                    "__example__": "Taluka"
+                },
+                "ListPermanentTaluka": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Taluka 1",
+                            "title": "Taluka 1"
+                        }
+                    ]
+                },
+                "VisibilityPermanentTaluka": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentVillage": {
+                    "type": "string",
+                    "__example__": "Village"
+                },
+                "ListPermanentVillage": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "Village 1",
+                            "title": "Village 1"
+                        }
+                    ]
+                },
+                "VisibilityPermanentVillage": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentPincode": {
+                    "type": "string",
+                    "__example__": "Pincode"
+                },
+                "VisibilityPermanentPincode": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "LabelPermanentAddressBody": {
+                    "type": "string",
+                    "__example__": "Sample Address"
+                },
+                "VisibilityPermanentAddressBody": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "RequiredSolfathersHusbandNameAdded": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilitySolfathersHusbandNameAdded": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "OSolfathersHusbandNameAdded": {
+                    "type": "string",
+                    "__example__": ""
+                },
+                "LabelSolfathersHusbandNameAdded": {
+                    "type": "string",
+                    "__example__": "fathers/ Husband Name"
+                },
+                "ListApplicantAddressMR": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "MR",
+                            "title": "MR"
+                        }
+                    ]
+                },
+                "LabelApplicantAddressMR": {
+                    "type": "string",
+                    "__example__": "fathers/ Husband Name"
+                },
+                "OApplicantAddressMR": {
+                    "type": "string",
+                    "__example__": ""
+                },
+                "RequiredApplicantAddressMR": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "VisibilityApplicantAddressMR": {
+                    "type": "boolean",
+                    "__example__": true
+                },
+                "EnabledApplicantAddressMR": {
+                    "type": "boolean",
+                    "__example__": true
                 },
                 "extraDetails": {
                     "type": "string",
                     "__example__": ""
                 }
             },
-            "id": "APPLICANT",
-            "title": "Applicant Detail",
+            "id": "WELCOME",
+            "title": "${data.screenName}",
             "layout": {
                 "type": "SingleColumnLayout",
                 "children": [
                     {
-                        "text": "${data.headingSolvencyName}",
-                        "visible": true,
-                        "type": "TextHeading"
+                        "label": "${data.LabelUserName}",
+                        "name": "OUserName",
+                        "required": true,
+                        "type": "TextInput"
                     },
                     {
-                        "label": "${data.LabelSalutationName}",
-                        "name": "OSalutation",
-                        "data-source": "${data.ListSalutation}",
-                        "on-select-action": {
+                        "on-click-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
                                 "OSalutation": "${form.OSalutation}",
                                 "OFullNameEnglish": "${form.OFullNameEnglish}",
                                 "OFullNameMarathi": "${form.OFullNameMarathi}",
-                                "OFathersSalutation": "${form.OFathersSalutation}",
-                                "OFathersNameEnglish": "${form.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${form.OFathersNameMarathi}",
-                                "ODOB": "${form.ODOB}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
                                 "OAge": "${form.OAge}",
                                 "OMobileNumber": "${form.OMobileNumber}",
                                 "OGender": "${form.OGender}",
-                                "OEmailID": "${form.OEmailID}",
+                                "OEmailId": "${form.OEmailId}",
                                 "OOccupation": "${form.OOccupation}",
-                                "OAdharNumber": "${form.OAdharNumber}",
-                                "OApplicantNationality": "${form.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}",
-                                "onSelectAction": "salutation"
+                                "OAddress": "${form.OAddress}",
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "confirm-username",
+                                "extraDetails": "${data.extraDetails}"
                             }
                         },
+                        "text": "${data.LabelConfirmUserName}",
+                        "type": "EmbeddedLink"
+                    },
+                    {
+                        "label": "${data.LabelFirstDropdown}",
+                        "name": "OFirstDropdown",
+                        "data-source": "${data.ListFirstDropdown}",
+                        "required": "${data.RequiredApplicantName}",
+                        "visible": "${data.VisibilityApplicantName}",
+                        "enabled": "${data.EnabledApplicantName}",
+                        "type": "Dropdown"
+                    },
+                    {
+                        "text": "${data.LabelApplicantDetailsHeading}",
+                        "visible": "${data.VisibilityApplicantDetails}",
+                        "type": "TextSubheading"
+                    },
+                    {
+                        "label": "${data.LabelSalutation}",
+                        "name": "OSalutation",
+                        "data-source": "${data.ListSalutation}",
+                        "required": "${data.RequiredSalutation}",
                         "visible": "${data.VisibilitySalutation}",
+                        "enabled": "${data.EnabledSalutation}",
                         "type": "Dropdown"
                     },
                     {
                         "label": "${data.LabelFullNameEnglish}",
                         "name": "OFullNameEnglish",
-                        "required": true,
-                        "visible": "${data.VisibilityFullName}",
+                        "required": "${data.RequiredFullNameEnglish}",
+                        "visible": "${data.VisibilityFullNameEnglish}",
                         "type": "TextInput",
                         "init-value": "${data.InitFullNameEnglish}"
                     },
                     {
                         "label": "${data.LabelFullNameMarathi}",
                         "name": "OFullNameMarathi",
+                        "visible": "${data.VisibilityFullNameMarathi}",
+                        "required": true,
                         "type": "TextInput",
                         "init-value": "${data.InitFullNameMarathi}"
                     },
                     {
-                        "label": "${data.LabelFathersSalutation}",
-                        "name": "OFathersSalutation",
+                        "label": "${data.LabelFatherSalutation}",
+                        "name": "OFatherSalutation",
                         "data-source": "${data.ListFatherSalutation}",
-                        "on-select-action": {
-                            "name": "data_exchange",
-                            "payload": {
-                                "OSalutation": "${form.OSalutation}",
-                                "OFullNameEnglish": "${form.OFullNameEnglish}",
-                                "OFullNameMarathi": "${form.OFullNameMarathi}",
-                                "OFathersSalutation": "${form.OFathersSalutation}",
-                                "OFathersNameEnglish": "${form.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${form.OFathersNameMarathi}",
-                                "ODOB": "${form.ODOB}",
-                                "OAge": "${form.OAge}",
-                                "OMobileNumber": "${form.OMobileNumber}",
-                                "OGender": "${form.OGender}",
-                                "OEmailID": "${form.OEmailID}",
-                                "OOccupation": "${form.OOccupation}",
-                                "OAdharNumber": "${form.OAdharNumber}",
-                                "OApplicantNationality": "${form.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}",
-                                "onSelectAction": "father-salutation"
-                            }
-                        },
+                        "required": "${data.RequiredFatherSalutation}",
                         "visible": "${data.VisibilityFatherSalutation}",
+                        "enabled": "${data.EnabledFatherSalutation}",
                         "type": "Dropdown"
                     },
                     {
-                        "label": "${data.LabelFathersNameEnglish}",
-                        "name": "OFathersNameEnglish",
-                        "required": "${data.IsRequiredFathersName}",
-                        "visible": "${data.VisibilityFathersNameEnglish}",
+                        "label": "${data.LabelFatherNameEnglish}",
+                        "name": "OFatherNameEnglish",
+                        "required": "${data.RequiredFatherNameEnglish}",
+                        "visible": "${data.VisiblityFatherNameEnglish}",
                         "type": "TextInput",
-                        "init-value": "${data.InitFathernameEnglish}"
+                        "init-value": "${data.InitFatherNameEnglish}"
                     },
                     {
-                        "label": "${data.LabelFathersNameMarathi}",
-                        "name": "OFathersNameMarathi",
+                        "label": "${data.LabelFatherNameMarathi}",
+                        "name": "OFatherNameMarathi",
+                        "required": "${data.RequiredFatherNameMarathi}",
                         "visible": "${data.VisibilityFatherNameMarathi}",
                         "type": "TextInput",
                         "init-value": "${data.InitFatherNameMarathi}"
                     },
                     {
                         "label": "${data.LabelDateOfBirth}",
-                        "name": "ODOB",
-                        "min-date": "${data.MinDateOfBirth}",
-                        "max-date": "${data.MaxDateOfBirth}",
+                        "name": "ODateOfBirth",
+                        "required": "${data.RequiredDateOfBirth}",
+                        "visible": "${data.VisibilityDateOfBirth}",
+                        "enabled": "${data.EnabledDateOfBirth}",
+                        "on-select-action": {
+                            "name": "data_exchange",
+                            "payload": {
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
+                                "OAddress": "${form.OAddress}",
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "date-of-birth",
+                                "extraDetails": "${data.extraDetails}"
+                            }
+                        },
                         "type": "DatePicker",
                         "init-value": "${data.InitDateOfBirth}"
                     },
                     {
                         "label": "${data.LabelAge}",
                         "name": "OAge",
+                        "required": "${data.RequiredAge}",
+                        "input-type": "number",
                         "visible": "${data.VisibilityAge}",
+                        "min-chars": 1,
+                        "max-chars": 3,
                         "type": "TextInput",
                         "init-value": "${data.InitAge}"
                     },
                     {
                         "label": "${data.LabelMobileNumber}",
                         "name": "OMobileNumber",
+                        "required": "${data.RequiredMobileNumber}",
+                        "input-type": "number",
                         "visible": "${data.VisibilityMobileNumber}",
+                        "min-chars": 10,
+                        "max-chars": 10,
                         "type": "TextInput",
                         "init-value": "${data.InitMobileNumber}"
                     },
@@ -428,364 +1005,475 @@
                         "label": "${data.LabelGender}",
                         "name": "OGender",
                         "data-source": "${data.ListGender}",
+                        "required": "${data.RequiredGender}",
                         "visible": "${data.VisibilityGender}",
-                        "type": "Dropdown"
+                        "enabled": "${data.EnabledGender}",
+                        "type": "Dropdown",
+                        "init-value": "${data.initGender}"
                     },
                     {
-                        "label": "${data.LabelEmail}",
-                        "name": "OEmailID",
-                        "visible": "${data.VisibilityEmail}",
-                        "type": "TextInput"
+                        "label": "${data.LabelEmailId}",
+                        "name": "OEmailId",
+                        "required": "${data.RequiredEmailId}",
+                        "input-type": "email",
+                        "visible": "${data.VisibilityEmailId}",
+                        "type": "TextInput",
+                        "init-value": "${data.initEmailId}"
                     },
                     {
                         "label": "${data.LabelOccupation}",
                         "name": "OOccupation",
                         "data-source": "${data.ListOccupation}",
-                        "type": "Dropdown"
+                        "required": "${data.RequiredOccupation}",
+                        "visible": "${data.VisibilityOccupation}",
+                        "enabled": "${data.EnabledOccupation}",
+                        "type": "Dropdown",
+                        "init-value": "${data.initOccupation}"
                     },
                     {
-                        "label": "${data.LabelAdharNumber}",
-                        "name": "OAdharNumber",
-                        "visible": "${data.VisibilityAdharNumber}",
-                        "type": "TextInput",
-                        "init-value": "${data.InitAdharNumber}"
+                        "text": "${data.LabelAadharAndNationality}",
+                        "visible": "${data.VisibilityAadharAndNationality}",
+                        "type": "TextBody"
                     },
                     {
-                        "label": "${data.LabelApplicantnationality}",
-                        "visible": "${data.VisibilityApplicantNationality}",
-                        "name": "OApplicantNationality",
-                        "type": "TextInput",
-                        "init-value": "${data.InitApplicantNationality}"
-                    },
-                    {
-                        "text": "${data.EmbededLinkForApplicantDetails}",
-                        "visible": "${data.VisibilityEmbeddedLink}",
-                        "on-click-action": {
-                            "name": "data_exchange",
-                            "payload": {
-                                "OSalutation": "${form.OSalutation}",
-                                "OFullNameEnglish": "${form.OFullNameEnglish}",
-                                "OFullNameMarathi": "${form.OFullNameMarathi}",
-                                "OFathersSalutation": "${form.OFathersSalutation}",
-                                "OFathersNameEnglish": "${form.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${form.OFathersNameMarathi}",
-                                "ODOB": "${form.ODOB}",
-                                "OAge": "${form.OAge}",
-                                "OMobileNumber": "${form.OMobileNumber}",
-                                "OGender": "${form.OGender}",
-                                "OEmailID": "${form.OEmailID}",
-                                "OOccupation": "${form.OOccupation}",
-                                "OAdharNumber": "${form.OAdharNumber}",
-                                "OApplicantNationality": "${form.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}"
-                            }
-                        },
-                        "type": "EmbeddedLink"
-                    },
-                    {
-                        "label": "${data.LabelFooterApplicantDetails}",
-                        "enabled": "${data.EnableFooterApplicantDetails}",
-                        "on-click-action": {
-                            "name": "data_exchange",
-                            "payload": {
-                                "OSalutation": "${form.OSalutation}",
-                                "OFullNameEnglish": "${form.OFullNameEnglish}",
-                                "OFullNameMarathi": "${form.OFullNameMarathi}",
-                                "OFathersSalutation": "${form.OFathersSalutation}",
-                                "OFathersNameEnglish": "${form.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${form.OFathersNameMarathi}",
-                                "ODOB": "${form.ODOB}",
-                                "OAge": "${form.OAge}",
-                                "OMobileNumber": "${form.OMobileNumber}",
-                                "OGender": "${form.OGender}",
-                                "OEmailID": "${form.OEmailID}",
-                                "OOccupation": "${form.OOccupation}",
-                                "OAdharNumber": "${form.OAdharNumber}",
-                                "OApplicantNationality": "${form.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}"
-                            }
-                        },
-                        "type": "Footer"
-                    }
-                ]
-            }
-        },
-        {
-            "data": {
-                "OSalutation": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OFullNameEnglish": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OFullNameMarathi": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OFathersSalutation": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OFathersNameEnglish": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OFathersNameMarathi": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "ODOB": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OAge": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OMobileNumber": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OGender": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OEmailID": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OOccupation": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OAdharNumber": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "OApplicantNationality": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "extraDetails": {
-                    "type": "string",
-                    "__example__": ""
-                },
-                "LabelOtherInformation": {
-                    "type": "string",
-                    "__example__": "Other Information"
-                },
-                "LabelAddress": {
-                    "type": "string",
-                    "__example__": "Address"
-                },
-                "FatherHusbandName": {
-                    "type": "string",
-                    "__example__": "Father's/Husband's Name"
-                },
-                "VisibilityFathersHusbandName": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "LabelPanCard": {
-                    "type": "string",
-                    "__example__": "PAN card number"
-                },
-                "LabelBeneficiaryDetails": {
-                    "type": "string",
-                    "__example__": "Beneficiary Details"
-                },
-                "VisibilityBeneficiaryDetails": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "LabelRelationshipToTheApplicant": {
-                    "type": "string",
-                    "__example__": "Relationship to the applicant"
-                },
-                "ListAddress": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "title": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "__example__": [
-                        {
-                            "id": "1",
-                            "title": "Nagpur Maharshtra"
-                        },
-                        {
-                            "id": "2",
-                            "title": "Nagpur Maharashtra 2"
-                        },
-                        {
-                            "id": "3",
-                            "title": "Nagpur Maharashtra three"
-                        }
-                    ]
-                },
-                "VisibilityRelationshipToTheApplicant": {
-                    "type": "boolean",
-                    "__example__": false
-                },
-                "ListRelationshipToTheApplicant": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "title": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "__example__": [
-                        {
-                            "id": "1",
-                            "title": "Relation 1"
-                        },
-                        {
-                            "id": "2",
-                            "title": "Relation 2"
-                        },
-                        {
-                            "id": "3",
-                            "title": "Relation 3"
-                        }
-                    ]
-                },
-                "LabelFooter": {
-                    "type": "string",
-                    "__example__": "Continue"
-                },
-                "LabelEmbeddedScreenTwo": {
-                    "type": "string",
-                    "__example__": "Confirm Details"
-                },
-                "VisibilityEmbeddedScreenTwo": {
-                    "type": "boolean",
-                    "__example__": false
-                }
-            },
-            "id": "APPLICANT_ADDRESS",
-            "title": "Applicant Address",
-            "layout": {
-                "type": "SingleColumnLayout",
-                "children": [
-                    {
-                        "text": "${data.LabelOtherInformation}",
-                        "type": "TextHeading"
+                        "text": "${data.LabelApplicantAddress}",
+                        "visible": "${data.VisibilityApplicantAddress}",
+                        "type": "TextSubheading"
                     },
                     {
                         "label": "${data.LabelAddress}",
                         "name": "OAddress",
-                        "data-source": "${data.ListAddress}",
+                        "required": "${data.RequiredAddress}",
+                        "visible": "${data.VisibilityAddress}",
+                        "max-length": 60,
+                        "type": "TextArea"
+                    },
+                    {
+                        "label": "${data.LabelBuilding}",
+                        "name": "OBuilding",
+                        "required": "${data.RequiredBuilding}",
+                        "input-type": "text",
+                        "visible": "${data.VisibilityBuilding}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelSection}",
+                        "name": "OSection",
+                        "required": "${data.RequiredSection}",
+                        "visible": "${data.VisibilitySection}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelStreet}",
+                        "name": "OStreet",
+                        "required": "${data.RequiredStreet}",
+                        "visible": "${data.VisibilityStreet}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelLandmark}",
+                        "name": "OLandmark",
+                        "required": "${data.RequiredLandmark}",
+                        "visible": "${data.VisibilityLandmark}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelDistrict}",
+                        "name": "ODistrict",
+                        "data-source": "${data.ListDistrict}",
+                        "required": "${data.RequiredDistrict}",
+                        "visible": "${data.VisibilityDistrict}",
+                        "enabled": "${data.EnabledDistrict}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
-                                "OSalutation": "${data.OSalutation}",
-                                "OFullNameEnglish": "${data.OFullNameEnglish}",
-                                "OFullNameMarathi": "${data.OFullNameMarathi}",
-                                "OFathersSalutation": "${data.OFathersSalutation}",
-                                "OFathersNameEnglish": "${data.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${data.OFathersNameMarathi}",
-                                "ODOB": "${data.ODOB}",
-                                "OAge": "${data.OAge}",
-                                "OMobileNumber": "${data.OMobileNumber}",
-                                "OGender": "${data.OGender}",
-                                "OEmailID": "${data.OEmailID}",
-                                "OOccupation": "${data.OOccupation}",
-                                "OAdharNumber": "${data.OAdharNumber}",
-                                "OApplicantNationality": "${data.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}",
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
                                 "OAddress": "${form.OAddress}",
-                                "OFathersHusbandName": "${form.OFathersHusbandName}",
-                                "OPanCard": "${form.OPanCard}",
-                                "onSelectAction": "address-applicant-details"
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "district",
+                                "extraDetails": "${data.extraDetails}"
                             }
                         },
                         "type": "Dropdown"
                     },
                     {
-                        "label": "${data.FatherHusbandName}",
-                        "required": true,
-                        "name": "OFathersHusbandName",
-                        "visible": "${data.VisibilityFathersHusbandName}",
-                        "type": "TextInput"
-                    },
-                    {
-                        "label": "${data.LabelPanCard}",
-                        "name": "OPanCard",
-                        "visible": "${data.VisibilityRelationshipToTheApplicant}",
-                        "type": "TextInput"
-                    },
-                    {
-                        "on-click-action": {
+                        "label": "${data.LabelTaluka}",
+                        "name": "OTaluka",
+                        "data-source": "${data.ListTaluka}",
+                        "required": "${data.RequiredTaluka}",
+                        "visible": "${data.VisibilitryTaluka}",
+                        "enabled": "${data.EnabledTaluka}",
+                        "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
-                                "OSalutation": "${data.OSalutation}",
-                                "OFullNameEnglish": "${data.OFullNameEnglish}",
-                                "OFullNameMarathi": "${data.OFullNameMarathi}",
-                                "OFathersSalutation": "${data.OFathersSalutation}",
-                                "OFathersNameEnglish": "${data.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${data.OFathersNameMarathi}",
-                                "ODOB": "${data.ODOB}",
-                                "OAge": "${data.OAge}",
-                                "OMobileNumber": "${data.OMobileNumber}",
-                                "OGender": "${data.OGender}",
-                                "OEmailID": "${data.OEmailID}",
-                                "OOccupation": "${data.OOccupation}",
-                                "OAdharNumber": "${data.OAdharNumber}",
-                                "OApplicantNationality": "${data.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}",
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
                                 "OAddress": "${form.OAddress}",
-                                "OFathersHusbandName": "${form.OFathersHusbandName}",
-                                "OPanCard": "${form.OPanCard}"
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "taluka",
+                                "extraDetails": "${data.extraDetails}"
                             }
                         },
-                        "text": "${data.LabelEmbeddedScreenTwo}",
-                        "visible": "${data.VisibilityEmbeddedScreenTwo}",
-                        "type": "EmbeddedLink"
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelVillage}",
+                        "name": "OVillage",
+                        "data-source": "${data.ListVillage}",
+                        "required": "${data.RequiredVillage}",
+                        "visible": "${data.VisibleVillage}",
+                        "enabled": "${data.EnabledVillage}",
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelApplicantAddressMR}",
+                        "name": "OApplicantAddressMR",
+                        "data-source": "${data.ListApplicantAddressMR}",
+                        "required": "${data.RequiredApplicantAddressMR}",
+                        "visible": "${data.VisibilityApplicantAddressMR}",
+                        "enabled": "${data.EnabledApplicantAddressMR}",
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelSolfathersHusbandNameAdded}",
+                        "name": "OSolfathersHusbandNameAdded",
+                        "required": "${data.RequiredSolfathersHusbandNameAdded}",
+                        "visible": "${data.VisibilitySolfathersHusbandNameAdded}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPincode}",
+                        "name": "OPincode",
+                        "required": "${data.RequiredPincode}",
+                        "input-type": "number",
+                        "visible": "${data.VisibilityPincode}",
+                        "min-chars": 6,
+                        "max-chars": 6,
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPanCardNo}",
+                        "name": "OPanCardNo",
+                        "required": "${data.RequiredPanCardNo}",
+                        "visible": "${data.VisiblePanCardNo}",
+                        "min-chars": 10,
+                        "max-chars": 10,
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelSameAsPresentAddress}",
+                        "name": "OSameAsPresentAddress",
+                        "data-source": "${data.ListSameAsPermanentAddress}",
+                        "required": "${data.RequiredSameAsPermanentAddress}",
+                        "visible": "${data.VisibleSameAsPermanentAddress}",
+                        "on-select-action": {
+                            "name": "data_exchange",
+                            "payload": {
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
+                                "OAddress": "${form.OAddress}",
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "same-as-permanent-address",
+                                "extraDetails": "${data.extraDetails}",
+                                "EnabledFooter": "${data.EnabledFooter}"
+                            }
+                        },
+                        "type": "CheckboxGroup"
+                    },
+                    {
+                        "text": "${data.LabelPermanentAddressBody}",
+                        "visible": "${data.VisibilityPermanentAddressBody}",
+                        "type": "TextBody"
+                    },
+                    {
+                        "label": "${data.LabelPermanentAddress}",
+                        "name": "OPermanentAddre",
+                        "required": true,
+                        "visible": "${data.VisibilityPermanentAddress}",
+                        "max-length": 60,
+                        "helper-text": "60",
+                        "type": "TextArea"
+                    },
+                    {
+                        "label": "${data.LabelPermanentBuilding}",
+                        "name": "OPermanentBuilding",
+                        "visible": "${data.VisibilityPermanentBuilding}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPermanentSection}",
+                        "name": "OPermanentSection",
+                        "visible": "${data.VisibilityPermanentSection}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPermanentStreet}",
+                        "name": "OPermanentStreet",
+                        "visible": "${data.VisibilityPermanentStreet}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPermanentLandmark}",
+                        "name": "OPermanentLandmark",
+                        "visible": "${data.VisibilityPermanentLandmark}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelPermanentDistrict}",
+                        "name": "OPermanentDistrict",
+                        "data-source": "${data.ListPermanentDistrict}",
+                        "required": true,
+                        "visible": "${data.VisibilityPermanentDistrict}",
+                        "on-select-action": {
+                            "name": "data_exchange",
+                            "payload": {
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
+                                "OAddress": "${form.OAddress}",
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "permanent-district",
+                                "extraDetails": "${data.extraDetails}"
+                            }
+                        },
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelPermanentTaluka}",
+                        "name": "OPermanentTaluka",
+                        "data-source": "${data.ListPermanentTaluka}",
+                        "required": true,
+                        "visible": "${data.VisibilityPermanentTaluka}",
+                        "on-select-action": {
+                            "name": "data_exchange",
+                            "payload": {
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
+                                "OAddress": "${form.OAddress}",
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "onSelectAction": "permanent-taluka",
+                                "extraDetails": "${data.extraDetails}"
+                            }
+                        },
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelPermanentVillage}",
+                        "name": "OPermanentVillage",
+                        "data-source": "${data.ListPermanentVillage}",
+                        "required": true,
+                        "visible": "${data.VisibilityPermanentVillage}",
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelPermanentPincode}",
+                        "name": "OPermanentPincode",
+                        "required": true,
+                        "input-type": "number",
+                        "visible": "${data.VisibilityPermanentPincode}",
+                        "min-chars": 6,
+                        "max-chars": 6,
+                        "type": "TextInput"
                     },
                     {
                         "on-click-action": {
                             "name": "data_exchange",
                             "payload": {
-                                "OSalutation": "${data.OSalutation}",
-                                "OFullNameEnglish": "${data.OFullNameEnglish}",
-                                "OFullNameMarathi": "${data.OFullNameMarathi}",
-                                "OFathersSalutation": "${data.OFathersSalutation}",
-                                "OFathersNameEnglish": "${data.OFathersNameEnglish}",
-                                "OFathersNameMarathi": "${data.OFathersNameMarathi}",
-                                "ODOB": "${data.ODOB}",
-                                "OAge": "${data.OAge}",
-                                "OMobileNumber": "${data.OMobileNumber}",
-                                "OGender": "${data.OGender}",
-                                "OEmailID": "${data.OEmailID}",
-                                "OOccupation": "${data.OOccupation}",
-                                "OAdharNumber": "${data.OAdharNumber}",
-                                "OApplicantNationality": "${data.OApplicantNationality}",
-                                "extraDetails": "${data.extraDetails}",
+                                "OUserName": "${form.OUserName}",
+                                "OFirstDropdown": "${form.OFirstDropdown}",
+                                "OSalutation": "${form.OSalutation}",
+                                "OFullNameEnglish": "${form.OFullNameEnglish}",
+                                "OFullNameMarathi": "${form.OFullNameMarathi}",
+                                "OFatherSalutation": "${form.OFatherSalutation}",
+                                "OFatherNameEnglish": "${form.OFatherNameEnglish}",
+                                "OFatherNameMarathi": "${form.OFatherNameMarathi}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OAge": "${form.OAge}",
+                                "OMobileNumber": "${form.OMobileNumber}",
+                                "OGender": "${form.OGender}",
+                                "OEmailId": "${form.OEmailId}",
+                                "OOccupation": "${form.OOccupation}",
                                 "OAddress": "${form.OAddress}",
-                                "OFathersHusbandName": "${form.OFathersHusbandName}",
-                                "OPanCard": "${form.OPanCard}"
+                                "OBuilding": "${form.OBuilding}",
+                                "OSection": "${form.OSection}",
+                                "OStreet": "${form.OStreet}",
+                                "OLandmark": "${form.OLandmark}",
+                                "ODistrict": "${form.ODistrict}",
+                                "OTaluka": "${form.OTaluka}",
+                                "OVillage": "${form.OVillage}",
+                                "OPincode": "${form.OPincode}",
+                                "OPanCardNo": "${form.OPanCardNo}",
+                                "OSameAsPresentAddress": "${form.OSameAsPresentAddress}",
+                                "OPermanentAddre": "${form.OPermanentAddre}",
+                                "OPermanentBuilding": "${form.OPermanentBuilding}",
+                                "OPermanentSection": "${form.OPermanentSection}",
+                                "OPermanentStreet": "${form.OPermanentStreet}",
+                                "OPermanentLandmark": "${form.OPermanentLandmark}",
+                                "OPermanentDistrict": "${form.OPermanentDistrict}",
+                                "OPermanentTaluka": "${form.OPermanentTaluka}",
+                                "OPermanentVillage": "${form.OPermanentVillage}",
+                                "OPermanentPincode": "${form.OPermanentPincode}",
+                                "extraDetails": "${data.extraDetails}",
+                                "EnabledFooter": "${data.EnabledFooter}"
                             }
                         },
                         "label": "${data.LabelFooter}",
+                        "enabled": "${data.EnabledFooter}",
                         "type": "Footer"
                     }
                 ]
-            }
+            },
+            "terminal": true
         },
         {
             "data": {
@@ -1841,6 +2529,62 @@
                 "SubHeadingDetailedpropertydetails": {
                     "type": "string",
                     "__example__": "propertydetails"
+                },
+                "EmbdConfirmShareDetails": {
+                    "type": "string",
+                    "__example__": "Confirm Share Details"
+                },
+                "VisibilityEmbdConfirmShareDetails": {
+                    "type": "boolean",
+                    "__example__": false
+                },
+                "ListCoOwnersSalutation": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "__example__": [
+                        {
+                            "id": "1",
+                            "title": "Salutation 1"
+                        },
+                        {
+                            "id": "2",
+                            "title": "Salutation 2"
+                        }
+                    ]
+                },
+                "LabelCoOwnersSalutation": {
+                    "type": "string",
+                    "__example__": "SellingPrice"
+                },
+                "VisibilityCoOwnersSalutation": {
+                    "type": "boolean",
+                    "__example__": false
+                },
+                "LabelCoOwnersName": {
+                    "type": "string",
+                    "__example__": "SellingPrice"
+                },
+                "VisibilityCoOwnersName": {
+                    "type": "boolean",
+                    "__example__": false
+                },
+                "LabelCoOwnersAddress": {
+                    "type": "string",
+                    "__example__": "SellingPrice"
+                },
+                "VisibilityCoOwnersAddress": {
+                    "type": "boolean",
+                    "__example__": false
                 }
             },
             "id": "BENEFICIARY",
@@ -1856,11 +2600,13 @@
                     {
                         "label": "${data.LabelRelationshipToTheApplicant}",
                         "name": "ORelationshipToTheApplicant",
+                        "required": true,
                         "data-source": "${data.ListRelationshipToTheApplicant}",
                         "visible": "${data.VisibilityRelationshipToTheApplicant}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -1921,11 +2667,13 @@
                     {
                         "label": "${data.LabelSalutation}",
                         "name": "OBeneficiarySalutation",
+                        "required": true,
                         "data-source": "${data.ListBeneficiarySalutation}",
                         "visible": "${data.VisibilityBeneficiarySalutation}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -1981,12 +2729,14 @@
                     {
                         "label": "${data.LabelBeneficiaryFullNameEnglish}",
                         "name": "OBeneficiaryFullNameEnglish",
+                        "required": true,
                         "visible": "${data.VisibilityBeneficiaryFullNameEnglish}",
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelBeneficiaryFullNameMarathi}",
                         "name": "OBeneficiaryFullNameMarathi",
+                        "required": true,
                         "visible": "${data.VisibilityBeneficiaryFullNameMarathi}",
                         "type": "TextInput"
                     },
@@ -2002,6 +2752,8 @@
                         "label": "${data.LabelBeneficiaryMobileNumber}",
                         "name": "OBeneficiaryMobileNmber",
                         "visible": "${data.VisibilityBeeficiaryMobileNumber}",
+                        "min-chars": 10,
+                        "max-chars": 10,
                         "input-type": "number",
                         "type": "TextInput"
                     },
@@ -2026,11 +2778,13 @@
                     {
                         "label": "${data.LabelGender}",
                         "name": "OBeneficiarysGender",
+                        "required": true,
                         "data-source": "${data.ListRadioGender}",
                         "visible": "${data.VisibilityBeneficiarysGender}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2091,6 +2845,7 @@
                     {
                         "label": "${data.LabelBeneficiaryRAddress}",
                         "name": "OBeneficiaryRAddress",
+                        "required": true,
                         "visible": "${data.VisibilityBeneficiaryRAddress}",
                         "type": "TextInput"
                     },
@@ -2121,11 +2876,13 @@
                     {
                         "label": "${data.LabelBeneficiaryDistrict}",
                         "name": "OBeneficiaryRDistrict",
+                        "required": true,
                         "data-source": "${data.ListBeneficiaryDistrict}",
                         "visible": "${data.VisibilitybeneficiaryDistrict}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2181,10 +2938,12 @@
                     {
                         "label": "${data.LabelbeneficiaryTaluka}",
                         "name": "OBeneficiaryRTaluka",
+                        "required": true,
                         "data-source": "${data.ListBeneficiarytaluka}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2241,11 +3000,13 @@
                     {
                         "label": "${data.LabelBeneficiaryVillage}",
                         "name": "OBeneficiaryRVillage",
+                        "required": true,
                         "data-source": "${data.ListBeneficiaryVillage}",
                         "visible": "${data.VisibilityBeneficiaryVillage}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2301,6 +3062,10 @@
                     {
                         "label": "${data.LabelBeneficiaryPinCode}",
                         "name": "OBeneficiarysRpinCode",
+                        "required": true,
+                        "input-type": "number",
+                        "min-chars": 6,
+                        "max-chars": 6,
                         "visible": "${data.VisibilityBeneficiaryPinCode}",
                         "type": "TextInput"
                     },
@@ -2312,14 +3077,18 @@
                     {
                         "label": "${data.LabelPurposeOfApplyingForCredit}",
                         "name": "OPurposeOfApplyingForCredit",
+                        "required": true,
                         "visible": "${data.VisibilityPurposeOfApplyingForCredit}",
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelAmountOfCreditAppliedFor}",
                         "name": "OAmmountOfCreditApplied",
+                        "required": true,
                         "visible": "${data.VisibilityAmmountOfCreditApplied}",
                         "type": "TextInput",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "input-type": "number"
                     },
                     {
@@ -2339,10 +3108,12 @@
                         "label": "${data.LabelPropertyCategory}",
                         "data-source": "${data.ListPropertyCategory}",
                         "name": "OPropertyCategory",
+                        "required": true,
                         "visible": "${data.VisibilityPropertyCategory}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2398,11 +3169,13 @@
                     {
                         "label": "${data.LabelSubCategory}",
                         "name": "OSubCategory",
+                        "required": true,
                         "data-source": "${data.ListSubCategory}",
                         "visible": "${data.VisibilitySubCategory}",
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2458,20 +3231,113 @@
                     {
                         "label": "${data.LabelPurchasePrice}",
                         "name": "OPurchasePrice",
+                        "required": true,
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "visible": "${data.VisibilityPurchasePrice}",
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelTodaysPriceAccToMarketPrice}",
                         "name": "OTodaysPriceAccMarketPrice",
+                        "required": true,
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "visible": "${data.VisibilityTodaysPriceAccMarketPrice}",
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelShare}",
                         "name": "OShare",
+                        "required": true,
+                        "min-chars": 1,
+                        "max-chars": 3,
+                        "input-type": "number",
                         "visible": "${data.VisibilityShare}",
                         "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelCoOwnersSalutation}",
+                        "name": "OCoOwnersSalutation",
+                        "required": true,
+                        "data-source": "${data.ListCoOwnersSalutation}",
+                        "visible": "${data.VisibilityCoOwnersSalutation}",
+                        "type": "Dropdown"
+                    },
+                    {
+                        "label": "${data.LabelCoOwnersName}",
+                        "name": "OCoOwnersName",
+                        "required": true,
+                        "visible": "${data.VisibilityCoOwnersName}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "label": "${data.LabelCoOwnersAddress}",
+                        "name": "OCoOwnersAddress",
+                        "required": true,
+                        "visible": "${data.VisibilityCoOwnersAddress}",
+                        "type": "TextInput"
+                    },
+                    {
+                        "on-click-action": {
+                            "name": "data_exchange",
+                            "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
+                                "OAddress": "${data.OAddress}",
+                                "OFathersHusbandName": "${data.OFathersHusbandName}",
+                                "OPanCard": "${data.OPanCard}",
+                                "OSalutation": "${data.OSalutation}",
+                                "OFullNameEnglish": "${data.OFullNameEnglish}",
+                                "OFullNameMarathi": "${data.OFullNameMarathi}",
+                                "OFathersSalutation": "${data.OFathersSalutation}",
+                                "OFathersNameEnglish": "${data.OFathersNameEnglish}",
+                                "OFathersNameMarathi": "${data.OFathersNameMarathi}",
+                                "ODOB": "${data.ODOB}",
+                                "OAge": "${data.OAge}",
+                                "OMobileNumber": "${data.OMobileNumber}",
+                                "OGender": "${data.OGender}",
+                                "OEmailID": "${data.OEmailID}",
+                                "OOccupation": "${data.OOccupation}",
+                                "OAdharNumber": "${data.OAdharNumber}",
+                                "OApplicantNationality": "${data.OApplicantNationality}",
+                                "extraDetails": "${data.extraDetails}",
+                                "ORelationshipToTheApplicant": "${form.ORelationshipToTheApplicant}",
+                                "OBeneficiarySalutation": "${form.OBeneficiarySalutation}",
+                                "OBeneficiaryFullNameEnglish": "${form.OBeneficiaryFullNameEnglish}",
+                                "ODateOfBirth": "${form.ODateOfBirth}",
+                                "OBeneficiaryMobileNmber": "${form.OBeneficiaryMobileNmber}",
+                                "OBeneficiaryEmail": "${form.OBeneficiaryEmail}",
+                                "OBeneficiaryAadharNumber": "${form.OBeneficiaryAadharNumber}",
+                                "OBeneficiarysGender": "${form.OBeneficiarysGender}",
+                                "OBeneficiaryRAddress": "${form.OBeneficiaryRAddress}",
+                                "OBeneficiaryRBuilding": "${form.OBeneficiaryRBuilding}",
+                                "OBeneficiarySection": "${form.OBeneficiarySection}",
+                                "OBeneficiaryRStreet": "${form.OBeneficiaryRStreet}",
+                                "OBeneficiaryRLandmark": "${form.OBeneficiaryRLandmark}",
+                                "OBeneficiaryRDistrict": "${form.OBeneficiaryRDistrict}",
+                                "OBeneficiaryRTaluka": "${form.OBeneficiaryRTaluka}",
+                                "OBeneficiarysRpinCode": "${form.OBeneficiarysRpinCode}",
+                                "OBeneficiaryRVillage": "${form.OBeneficiaryRVillage}",
+                                "OPurposeOfApplyingForCredit": "${form.OPurposeOfApplyingForCredit}",
+                                "OAmmountOfCreditApplied": "${form.OAmmountOfCreditApplied}",
+                                "OPropertyCategory": "${form.OPropertyCategory}",
+                                "OSubCategory": "${form.OSubCategory}",
+                                "OPurchasePrice": "${form.OPurchasePrice}",
+                                "OTodaysPriceAccMarketPrice": "${form.OTodaysPriceAccMarketPrice}",
+                                "OShare": "${form.OShare}",
+                                "OHonorefic": "${form.OHonorefic}",
+                                "WitnessFullName": "${form.WitnessFullName}",
+                                "OWitnessFullAddress": "${form.OWitnessFullAddress}",
+                                "OReasonForTheEstimateValue": "${form.OReasonForTheEstimateValue}",
+                                "OApproval": "${form.OApproval}",
+                                "onSelectAction": "confirm-share"
+                            }
+                        },
+                        "text": "${data.EmbdConfirmShareDetails}",
+                        "visible": "${data.VisibilityEmbdConfirmShareDetails}",
+                        "type": "EmbeddedLink"
                     },
                     {
                         "text": "${data.HeadingDetailedpropertydetails}",
@@ -2499,11 +3365,17 @@
                         "label": "${data.LabelPurchasePriceColdPlate}",
                         "visible": "${data.VisibilityPurchasePriceColdPlate}",
                         "name": "OPurchasePriceColdPlate",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelSellingPrice}",
                         "visible": "${data.VisibilitySellingPrice}",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "name": "OSellingPrice",
                         "type": "TextInput"
                     },
@@ -2516,6 +3388,8 @@
                     {
                         "label": "${data.LabelAmountCash}",
                         "visible": "${data.VisibilityAmountCash}",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "name": "OAmountCash",
                         "type": "TextInput"
                     },
@@ -2534,6 +3408,9 @@
                     {
                         "label": "${data.LabelPurchasePriceTelevision}",
                         "visible": "${data.VisibilityPurchasePriceTelevision}",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "name": "OPurchasePriceTelevision",
                         "type": "TextInput"
                     },
@@ -2541,6 +3418,9 @@
                         "label": "${data.LabelSellingPriceTelevision}",
                         "visible": "${data.VisibilitySellingPriceTelevision}",
                         "name": "OSellingPriceTelevision",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
@@ -2559,6 +3439,9 @@
                         "label": "${data.LabelJewelryGoldWeight}",
                         "visible": "${data.VisibilityJewelryGoldWeight}",
                         "name": "OJewelryGoldWeight",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 3,
                         "type": "TextInput"
                     },
                     {
@@ -2571,6 +3454,8 @@
                     {
                         "label": "${data.LabelJewelryGoldWeightAmount}",
                         "visible": "${data.VisibilityJewelryGoldWeightAmount}",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "name": "OJewelryGoldWeightAmount",
                         "type": "TextInput"
                     },
@@ -2596,12 +3481,18 @@
                         "label": "${data.LabelPurchasePriceWashingMachine}",
                         "visible": "${data.VisibilityPurchasePriceWashingMachine}",
                         "name": "OPurchasePriceWashingMachine",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelSellingPriceWashingMachine}",
                         "visible": "${data.VisibilitySellingPriceWashingMachine}",
                         "name": "OSellingPriceWashingMachine",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
@@ -2620,12 +3511,18 @@
                         "label": "${data.LabelPurchasePriceVehicles}",
                         "visible": "${data.VisibilityPurchasePriceVehicles}",
                         "name": "OPurchasePriceVehicles",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
                         "label": "${data.LabelSellingPriceVehicles}",
                         "visible": "${data.VisibilitySellingPriceVehicles}",
                         "name": "OSellingPriceVehicles",
+                        "input-type": "number",
+                        "min-chars": 1,
+                        "max-chars": 9,
                         "type": "TextInput"
                     },
                     {
@@ -2641,6 +3538,7 @@
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2718,6 +3616,7 @@
                         "on-select-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2775,6 +3674,7 @@
                         "on-click-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -2838,6 +3738,7 @@
                         "on-click-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
                                 "OAddress": "${data.OAddress}",
                                 "OFathersHusbandName": "${data.OFathersHusbandName}",
                                 "OPanCard": "${data.OPanCard}",
@@ -3942,6 +4843,9 @@
                                     "label": "${data.LabelHouseNumber}",
                                     "name": "OHouseNumber",
                                     "required": true,
+                                    "min-chars": 1,
+                                    "max-chars": 20,
+                                    "input-type": "number",
                                     "visible": "${data.VisibilityHouseNumber}",
                                     "type": "TextInput"
                                 },
@@ -3955,6 +4859,9 @@
                                 {
                                     "label": "${data.LabelArea}",
                                     "name": "OArea",
+                                    "input-type": "number",
+                                    "min-chars": 1,
+                                    "max-chars": 10,
                                     "required": true,
                                     "visible": "${data.VisibilityArea}",
                                     "type": "TextInput"
@@ -3966,6 +4873,7 @@
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                             "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                             "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",
@@ -4034,10 +4942,12 @@
                                 {
                                     "label": "${data.LabelPropertyDetailsDistrict}",
                                     "name": "OPropertyDistrict",
+                                    "required": true,
                                     "data-source": "${data.ListPropertyDistrict}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                             "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                             "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",
@@ -4105,10 +5015,12 @@
                                 {
                                     "label": "${data.LabelpropertyTaltuka}",
                                     "name": "OPropertyTaluka",
+                                    "required": true,
                                     "data-source": "${data.ListPropertyTaluka}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                             "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                             "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",
@@ -4176,10 +5088,12 @@
                                 {
                                     "label": "${data.LabelPropertyVillage}",
                                     "name": "OPropertyVillage",
+                                    "required": true,
                                     "data-source": "${data.ListPropertyVillage}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                             "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                             "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",
@@ -4268,6 +5182,8 @@
                                     "on-click-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
+                                            "BENEFICIARY": "${screen.BENEFICIARY.form}",
                                             "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                             "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                             "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",
@@ -4338,6 +5254,8 @@
                                 {
                                     "label": "${data.LabelHouseNoPropertyNoBungalow}",
                                     "name": "OHouseNoPropertyNoBungalow",
+                                    "min-chars": 1,
+                                    "max-chars": 20,
                                     "visible": "${data.VisibiltyHouseNoPropertyNoBungalow}",
                                     "type": "TextInput"
                                 },
@@ -4350,12 +5268,17 @@
                                 {
                                     "label": "${data.LabelAreaBungalow}",
                                     "name": "OAreaBungalow",
+                                    "required": true,
+                                    "input-type": "number",
+                                    "min-chars": 1,
+                                    "max-chars": 10,
                                     "visible": "${data.VisibiltyAreaBungalow}",
                                     "type": "TextInput"
                                 },
                                 {
                                     "label": "${data.LabelUnitBungalowDetails}",
                                     "name": "OUnitBungalowDetails",
+                                    "required": true,
                                     "data-source": "${data.ListUnitBungalowDetails}",
                                     "visible": "${data.VisibilityUnitBungalowDetails}",
                                     "type": "Dropdown"
@@ -4369,11 +5292,13 @@
                                 {
                                     "label": "${data.LabelDistrictDetailsBungalow}",
                                     "name": "ODistrictDetailsBungalow",
+                                    "required": true,
                                     "data-source": "${data.ListDistrictDetailsBungalow}",
                                     "visible": "${data.VisibilityDistrictDetailsBungalow}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4401,11 +5326,13 @@
                                 {
                                     "label": "${data.LabelTalukaDetailsBungalow}",
                                     "name": "OTalukaDetailsBungalow",
+                                    "required": true,
                                     "data-source": "${data.ListTalukaDetailsBungalow}",
                                     "visible": "${data.VisibilityTalukaDetailsBungalow}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4434,11 +5361,13 @@
                                 {
                                     "label": "${data.LabelVillageDetailsBungalow}",
                                     "name": "OVillageDetailsBungalow",
+                                    "required": true,
                                     "data-source": "${data.ListVillageDetailsBungalow}",
                                     "visible": "${data.VisibilityVillageDetailsBungalow}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4482,23 +5411,31 @@
                                 {
                                     "label": "${data.LabelSurveyNoShop}",
                                     "name": "OSurveyNoShop",
+                                    "min-chars": 1,
+                                    "max-chars": 24,
                                     "visible": "${data.VisibiltySurveyNoShop}",
                                     "type": "TextInput"
                                 },
                                 {
                                     "label": "${data.LabelAreaShop}",
                                     "name": "OAreaShop",
+                                    "required": true,
+                                    "input-type": "number",
+                                    "min-chars": 1,
+                                    "max-chars": 10,
                                     "visible": "${data.VisibiltyAreaShop}",
                                     "type": "TextInput"
                                 },
                                 {
                                     "label": "${data.LabelUnitShop}",
                                     "name": "OUnitShop",
+                                    "required": true,
                                     "data-source": "${data.ListUnitShop}",
                                     "visible": "${data.VisibilityUnitShop}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4535,11 +5472,13 @@
                                 {
                                     "label": "${data.LabelDistrictShop}",
                                     "name": "ODistrictShop",
+                                    "required": true,
                                     "data-source": "${data.ListDistrictShop}",
                                     "visible": "${data.VisibilityDistrictShop}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4571,11 +5510,13 @@
                                 {
                                     "label": "${data.LabelTalukaShop}",
                                     "name": "OTalukaShop",
+                                    "required": true,
                                     "data-source": "${data.ListTalukaShop}",
                                     "visible": "${data.VisibilityTalukaShop}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4608,11 +5549,13 @@
                                 {
                                     "label": "${data.LabelVillageShop}",
                                     "name": "OVillageShop",
+                                    "required": true,
                                     "data-source": "${data.ListVillageShop}",
                                     "visible": "${data.VisibilityVillageShop}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4660,12 +5603,17 @@
                                 {
                                     "label": "${data.LabelAreaLand}",
                                     "name": "OAreaLand",
+                                    "input-type": "number",
+                                    "min-chars": 1,
+                                    "max-chars": 10,
+                                    "required": true,
                                     "visible": "${data.VisibiltyAreaLand}",
                                     "type": "TextInput"
                                 },
                                 {
                                     "label": "${data.LabelUnitLand}",
                                     "name": "OUnitLand",
+                                    "required": true,
                                     "data-source": "${data.ListUnitLand}",
                                     "visible": "${data.VisibilityUnitLand}",
                                     "type": "Dropdown"
@@ -4679,11 +5627,13 @@
                                 {
                                     "label": "${data.LabelDistrictLand}",
                                     "name": "ODistrictLand",
+                                    "required": true,
                                     "data-source": "${data.ListDistrictLand}",
                                     "visible": "${data.VisibilityDistrictLand}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4717,11 +5667,13 @@
                                 {
                                     "label": "${data.LabelTalukaLand}",
                                     "name": "OTalukaLand",
+                                    "required": true,
                                     "data-source": "${data.ListTalukaLand}",
                                     "visible": "${data.VisibilityTalukaLand}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4757,11 +5709,13 @@
                                 {
                                     "label": "${data.LabelVillageLand}",
                                     "name": "OVillageLand",
+                                    "required": true,
                                     "data-source": "${data.ListVillageLand}",
                                     "visible": "${data.VisibilityVillageLand}",
                                     "on-select-action": {
                                         "name": "data_exchange",
                                         "payload": {
+                                            "WELCOME": "${screen.WELCOME.form}",
                                             "OAddress": "${data.OAddress}",
                                             "OFathersHusbandName": "${data.OFathersHusbandName}",
                                             "OPanCard": "${data.OPanCard}",
@@ -4811,6 +5765,8 @@
                         "on-click-action": {
                             "name": "data_exchange",
                             "payload": {
+                                "WELCOME": "${screen.WELCOME.form}",
+                                "BENEFICIARY": "${screen.BENEFICIARY.form}",
                                 "ORelationshipToTheApplicant": "${data.ORelationshipToTheApplicant}",
                                 "OBeneficiarySalutation": "${data.OBeneficiarySalutation}",
                                 "OBeneficiaryFullNameEnglish": "${data.OBeneficiaryFullNameEnglish}",

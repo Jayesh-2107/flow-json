@@ -223,7 +223,7 @@
 //                 "poldsurveyno": null,
 //                 "JointFlag": "Single"
 //             },
-//               {
+//               {`
 //                 "previousTranDesc": null,
 //                 "transactionid": null,
 //                 "pSerialNo": 1,
@@ -264,11 +264,9 @@
 //     }
 // }
 
-
 // const pahaniArray = data.getCurrentPahaniDetailsResponse.GetCurrentPahaniDetailsResult
 
 // console.log(pahaniArray.length)
-
 
 // var nextItem = false;
 // function pagination(){
@@ -279,31 +277,27 @@
 // }
 // pagination()
 
-
-
-const arr = [1,2,3,4,5,6,7,8,9,10] //this is data in the array where we have lenghth more than 5
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //this is data in the array where we have lenghth more than 5
 
 var nextItem = false;
-function pagination(data){
-    if(data.length > 5 ){
-        nextItem = true;
-        console.log(arr.slice(0,5))
-        console.log("Next")
-    }
-    console.log(nextItem);
-    // console.log(arr);
+function pagination(data) {
+  if (data.length > 5) {
+    nextItem = true;
+    console.log(arr.slice(0, 5));
+    console.log("Next");
+  }
+  console.log(nextItem);
+  // console.log(arr);
 }
-pagination(arr)
+pagination(arr);
 
-function printData(onClickNext){
-    if(onClickNext == true){
-        console.log("OnclickNext:",onClickNext)
-            console.log(arr.slice(5,10))
-    }
+function printData(onClickNext) {
+  if (onClickNext == true) {
+    console.log("OnclickNext:", onClickNext);
+    console.log(arr.slice(5, 10));
+  }
 }
-printData(true)
-
-
+printData(true);
 
 /*
 resume:
