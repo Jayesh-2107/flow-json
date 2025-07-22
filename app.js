@@ -223,3 +223,5 @@
 // })
 
 // console.log(newArray)
+
+const abc = "";
