@@ -1,2201 +1,375 @@
-const abc = {
-  data: {
-    ORelationshipToTheApplicant: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiarySalutation: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryFullNameEnglish: {
-      type: "string",
-      __example__: "",
-    },
-    ODateOfBirth: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryMobileNmber: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryEmail: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryAadharNumber: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiarysGender: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRAddress: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRBuilding: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiarySection: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRStreet: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRLandmark: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRDistrict: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRTaluka: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiarysRpinCode: {
-      type: "string",
-      __example__: "",
-    },
-    OBeneficiaryRVillage: {
-      type: "string",
-      __example__: "",
-    },
-    OPurposeOfApplyingForCredit: {
-      type: "string",
-      __example__: "",
-    },
-    OAmmountOfCreditApplied: {
-      type: "string",
-      __example__: "",
-    },
-    OPropertyCategory: {
-      type: "string",
-      __example__: "",
-    },
-    OSubCategory: {
-      type: "string",
-      __example__: "",
-    },
-    OPurchasePrice: {
-      type: "string",
-      __example__: "",
-    },
-    OTodaysPriceAccMarketPrice: {
-      type: "string",
-      __example__: "",
-    },
-    OShare: {
-      type: "string",
-      __example__: "",
-    },
-    OHonorefic: {
-      type: "string",
-      __example__: "",
-    },
-    WitnessFullName: {
-      type: "string",
-      __example__: "",
-    },
-    OWitnessFullAddress: {
-      type: "string",
-      __example__: "",
-    },
-    OReasonForTheEstimateValue: {
-      type: "string",
-      __example__: "",
-    },
-    OApproval: {
-      type: "array",
-      items: {
-        type: "string",
-      },
-      __example__: [],
-    },
-    OAddress: {
-      type: "string",
-      __example__: "",
-    },
-    OFathersHusbandName: {
-      type: "string",
-      __example__: "",
-    },
-    OPanCard: {
-      type: "string",
-      __example__: "",
-    },
-    OSalutation: {
-      type: "string",
-      __example__: "",
-    },
-    OFullNameEnglish: {
-      type: "string",
-      __example__: "",
-    },
-    OFullNameMarathi: {
-      type: "string",
-      __example__: "",
-    },
-    OFathersSalutation: {
-      type: "string",
-      __example__: "",
-    },
-    OFathersNameEnglish: {
-      type: "string",
-      __example__: "",
-    },
-    OFathersNameMarathi: {
-      type: "string",
-      __example__: "",
-    },
-    ODOB: {
-      type: "string",
-      __example__: "",
-    },
-    OAge: {
-      type: "string",
-      __example__: "",
-    },
-    OMobileNumber: {
-      type: "string",
-      __example__: "",
-    },
-    OGender: {
-      type: "string",
-      __example__: "",
-    },
-    OEmailID: {
-      type: "string",
-      __example__: "",
-    },
-    OOccupation: {
-      type: "string",
-      __example__: "",
-    },
-    OAdharNumber: {
-      type: "string",
-      __example__: "",
-    },
-    OApplicantNationality: {
-      type: "string",
-      __example__: "",
-    },
-    extraDetails: {
-      type: "string",
-      __example__: "",
-    },
-    LabelAppartmentDetails: {
-      type: "string",
-      __example__: "Detailed Apartment Details ",
-    },
-    VisibilityAppartmentDetails: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelHouseNumber: {
-      type: "string",
-      __example__: "House No./ Property No.",
-    },
-    VisibilityHouseNumber: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelLocation: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibilityLocation: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelArea: {
-      type: "string",
-      __example__: "Area",
-    },
-    VisibilityArea: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelUnit: {
-      type: "string",
-      __example__: "Unit",
-    },
-    ListUnit: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Unit 1 ",
-        },
-        {
-          id: "2",
-          title: "Unit 2",
-        },
-      ],
-    },
-    VisibilityUnit: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelPropertyDetailsDistrict: {
-      type: "string",
-      __example__: "District",
-    },
-    ListPropertyDistrict: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "District 1",
-        },
-        {
-          id: "2",
-          title: "District 2",
-        },
-      ],
-    },
-    VisibiltyPropertyDistrict: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelpropertyTaltuka: {
-      type: "string",
-      __example__: "Taluka",
-    },
-    ListPropertyTaluka: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Taluka 1",
-        },
-        {
-          id: "2",
-          title: "Taluka 2",
-        },
-      ],
-    },
-    VisibilityPropertyTaluka: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelPropertyVillage: {
-      type: "string",
-      __example__: "Village",
-    },
-    ListPropertyVillage: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Village 1",
-        },
-        {
-          id: "2",
-          title: "Village 2",
-        },
-        {
-          id: "3",
-          title: "Village 3",
-        },
-      ],
-    },
-    VisibiltyPropertyVillage: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelPricingDetails: {
-      type: "string",
-      __example__: "Pricing Details",
-    },
-    VisibiltyPricingDetails: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelSoleProprietor: {
-      type: "string",
-      __example__: "Is the certified person the sale proprietor?",
-    },
-    VisibilitySoleProprietor: {
-      type: "boolean",
-      __example__: false,
-    },
-    HelperSoleProprietor: {
-      type: "string",
-      __example__: "Is the certified person is the sole proprietor is",
-    },
-    LabelJointHinduProperty: {
-      type: "string",
-      __example__: "Is is joint Hindu property and if so,",
-    },
-    VisibilityJointHinduProperthy: {
-      type: "boolean",
-      __example__: false,
-    },
-    HelperJointHinduProperty: {
-      type: "string",
-      __example__: "Is it joint Hindu property and if so, What is the",
-    },
-    EmmbededLinkAppartmentDetails: {
-      type: "string",
-      __example__: "Confirm Details",
-    },
-    VisibilityConfirmAppartmentDetails: {
-      type: "boolean",
-      __example__: false,
-    },
-    LabelFooterDetailedPropertyDetailsScreen: {
-      type: "string",
-      __example__: "Next Screen for Upload document",
-    },
-    EnableFooterDetailsPropertyDetailsScreen: {
-      type: "boolean",
-      __example__: false,
-    },
-    OHouseNoPropertyNoBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelHouseNoPropertyNoBungalow: {
-      type: "string",
-      __example__: "House No./ Property No.",
-    },
-    VisibiltyHouseNoPropertyNoBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    OLocationBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelLocationBungalow: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibiltyLocationBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    OAreaBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelAreaBungalow: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibiltyAreaBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    OUnitBungalowDetails: {
-      type: "string",
-      __example__: "",
-    },
-    LabelUnitBungalowDetails: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibiltyUnitBungalowDetails: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListUnitBungalowDetails: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Unit 1 ",
-        },
-        {
-          id: "2",
-          title: "Unit 2",
-        },
-      ],
-    },
-    OPricingDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelPricingDetailsBungalow: {
-      type: "string",
-      __example__: "Pricing details",
-    },
-    VisibiltyPricingDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    ODistrictDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelDistrictDetailsBungalow: {
-      type: "string",
-      __example__: "District",
-    },
-    VisibilityDistrictDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListDistrictDetailsBungalow: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "District 1",
-        },
-        {
-          id: "2",
-          title: "District 1",
-        },
-      ],
-    },
-    OTalukaDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelTalukaDetailsBungalow: {
-      type: "string",
-      __example__: "District",
-    },
-    VisibilityTalukaDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListTalukaDetailsBungalow: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "District 1",
-        },
-        {
-          id: "2",
-          title: "District 1",
-        },
-      ],
-    },
-    OVillageDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelVillageDetailsBungalow: {
-      type: "string",
-      __example__: "District",
-    },
-    VisibilityVillageDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListVillageDetailsBungalow: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Village 1",
-        },
-        {
-          id: "2",
-          title: "Village 1",
-        },
-      ],
-    },
-    ObusinessOwnershipInfoDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabelbusinessOwnershipInfoDetailsBungalow: {
-      type: "string",
-      __example__: "Ownership Info Details Bungalow",
-    },
-    VisibilityBusinessOwnershipInfoDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    OjointHinduPropertyDetailsBungalow: {
-      type: "string",
-      __example__: "",
-    },
-    LabeljointHinduPropertyDetailsBungalow: {
-      type: "string",
-      __example__: "joint Hindu Property Details Bungalow",
-    },
-    VisibiltyjointHinduPropertyDetailsBungalow: {
-      type: "boolean",
-      __example__: false,
-    },
-    OSurveyNoShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelSurveyNoShop: {
-      type: "string",
-      __example__: "Survey no.",
-    },
-    VisibiltySurveyNoShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    OAreaShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelAreaShop: {
-      type: "string",
-      __example__: "Areao.",
-    },
-    VisibiltyAreaShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    OUnitShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelUnitShop: {
-      type: "string",
-      __example__: "Unit",
-    },
-    VisibilityUnitShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListUnitShop: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Unit 1",
-        },
-        {
-          id: "2",
-          title: "Unit 1",
-        },
-      ],
-    },
-    OLocationShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelLocationShop: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibiltyLocationShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    ODistrictShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelDistrictShop: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibilityDistrictShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListDistrictShop: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "District 1",
-        },
-        {
-          id: "2",
-          title: "District 1",
-        },
-      ],
-    },
-    OTalukaShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelTalukaShop: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibilityTalukaShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListTalukaShop: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Taluka 1",
-        },
-        {
-          id: "2",
-          title: "Taluka 1",
-        },
-      ],
-    },
-    OVillageShop: {
-      type: "string",
-      __example__: "",
-    },
-    LabelVillageShop: {
-      type: "string",
-      __example__: "Location",
-    },
-    VisibilityVillageShop: {
-      type: "boolean",
-      __example__: false,
-    },
-    ListVillageShop: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "Taluka 1",
-        },
-        {
-          id: "2",
-          title: "Taluka 1",
-        },
-      ],
-    },
-    OSurveyNoLand: {
-      type: "string",
-      __example__: "",
-    },
-    OLocationLand: {
-      type: "string",
-      __example__: "",
-    },
-    OAreaLand: {
-      type: "string",
-      __example__: "",
-    },
-    OUnitLand: {
-      type: "string",
-      __example__: "",
-    },
-    OPricingLand: {
-      type: "string",
-      __example__: "",
-    },
-    ODistrictLand: {
-      type: "string",
-      __example__: "",
-    },
-    OTalukaLand: {
-      type: "string",
-      __example__: "",
-    },
-    OVillageLand: {
-      type: "string",
-      __example__: "",
-    },
-    ObusinessOwnershipInfoLand: {
-      type: "string",
-      __example__: "",
-    },
-    OjointHinduPropertyLand: {
-      type: "string",
-      __example__: "",
-    },
-    ListUnitLand: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "ListUnitLand 1",
-        },
-        {
-          id: "2",
-          title: "ListUnitLand 1",
-        },
-      ],
-    },
-    ListVillageLand: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "VillageLand 1",
-        },
-        {
-          id: "2",
-          title: "VillageLand 2",
-        },
-      ],
-    },
-    ListTalukaLand: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "ListTalukaLand 1",
-        },
-        {
-          id: "2",
-          title: "ListTalukaLand 1",
-        },
-      ],
-    },
-    ListDistrictLand: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          id: {
-            type: "string",
-          },
-          title: {
-            type: "string",
-          },
-        },
-      },
-      __example__: [
-        {
-          id: "1",
-          title: "ListDistrictLand 1",
-        },
-        {
-          id: "2",
-          title: "ListDistrictLand 1",
-        },
-      ],
-    },
-    LabeljointHinduPropertyLand: {
-      type: "string",
-      __example__: "Hindu Property Land.",
-    },
-    LabelbusinessOwnershipInfoLand: {
-      type: "string",
-      __example__: "business Ownership Info Land.",
-    },
-    LabelVillageLand: {
-      type: "string",
-      __example__: "LabelVillageLand.",
-    },
-    LabelTalukaLand: {
-      type: "string",
-      __example__: "LabelTalukaLand.",
-    },
-    LabelDistrictLand: {
-      type: "string",
-      __example__: "LabelDistrictLand.",
-    },
-    LabelPricingLand: {
-      type: "string",
-      __example__: "LabelPricingLand.",
-    },
-    LabelUnitLand: {
-      type: "string",
-      __example__: "LabelUnitLand.",
-    },
-    LabelAreaLand: {
-      type: "string",
-      __example__: "LabelAreaLand.",
-    },
-    SwitchRealEstateSubCategory: {
-      type: "string",
-      __example__: "SwitchRealEstateSubCategory.",
-    },
-    LabelLocationLand: {
-      type: "string",
-      __example__: "LabelLocationLand.",
-    },
-    LabelSurveyNoLand: {
-      type: "string",
-      __example__: "LabelSurveyNoLand.",
-    },
-    VisibiltySurveyNoLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibiltyLocationLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibiltyAreaLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityUnitLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibiltyPricingLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityDistrictLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityTalukaLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityVillageLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityBusinessOwnershipInfoLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibiltyjointHinduPropertyLand: {
-      type: "boolean",
-      __example__: false,
-    },
-    VisibilityUnitBungalowDetails: {
-      type: "boolean",
-      __example__: false,
-    },
-  },
-  id: "DETAILED",
-  title: "Detailed Property Details",
-  layout: {
-    type: "SingleColumnLayout",
-    children: [
-      {
-        value: "${data.SwitchRealEstateSubCategory}",
-        cases: {
-          default: [],
-          Apartment: [
-            {
-              label: "${data.LabelAppartmentDetails}",
-              name: "OAppartamentDetails",
-              required: true,
-              visible: "${data.VisibilityAppartmentDetails}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelHouseNumber}",
-              name: "OHouseNumber",
-              required: true,
-              "min-chars": 1,
-              "max-chars": 20,
-              "input-type": "number",
-              visible: "${data.VisibilityHouseNumber}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelLocation}",
-              name: "OLocation",
-              required: true,
-              visible: "${data.VisibilityLocation}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelArea}",
-              name: "OArea",
-              "input-type": "number",
-              "min-chars": 1,
-              "max-chars": 10,
-              required: true,
-              visible: "${data.VisibilityArea}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelUnit}",
-              name: "OUnit",
-              "data-source": "${data.ListUnit}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  ORelationshipToTheApplicant:
-                    "${data.ORelationshipToTheApplicant}",
-                  OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-                  OBeneficiaryFullNameEnglish:
-                    "${data.OBeneficiaryFullNameEnglish}",
-                  ODateOfBirth: "${data.ODateOfBirth}",
-                  OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-                  OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-                  OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-                  OBeneficiarysGender: "${data.OBeneficiarysGender}",
-                  OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-                  OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-                  OBeneficiarySection: "${data.OBeneficiarySection}",
-                  OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-                  OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-                  OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-                  OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-                  OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-                  OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-                  OPurposeOfApplyingForCredit:
-                    "${data.OPurposeOfApplyingForCredit}",
-                  OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-                  OPropertyCategory: "${data.OPropertyCategory}",
-                  OSubCategory: "${data.OSubCategory}",
-                  OPurchasePrice: "${data.OPurchasePrice}",
-                  OTodaysPriceAccMarketPrice:
-                    "${data.OTodaysPriceAccMarketPrice}",
-                  OShare: "${data.OShare}",
-                  OHonorefic: "${data.OHonorefic}",
-                  WitnessFullName: "${data.WitnessFullName}",
-                  OWitnessFullAddress: "${data.OWitnessFullAddress}",
-                  OReasonForTheEstimateValue:
-                    "${data.OReasonForTheEstimateValue}",
-                  OApproval: "${data.OApproval}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  OAppartamentDetails: "${form.OAppartamentDetails}",
-                  OHouseNumber: "${form.OHouseNumber}",
-                  OLocation: "${form.OLocation}",
-                  OArea: "${form.OArea}",
-                  OUnit: "${form.OUnit}",
-                  OPropertyDistrict: "${form.OPropertyDistrict}",
-                  OPropertyTaluka: "${form.OPropertyTaluka}",
-                  OPropertyVillage: "${form.OPropertyVillage}",
-                  OPricingDetails: "${form.OPricingDetails}",
-                  OSoleProprietor: "${form.OSoleProprietor}",
-                  OJointHinduProperty: "${form.OJointHinduProperty}",
-                  onSelectAction: "unit-unit",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyPropertyDistrict: false,
-                  VisibilityPropertyTaluka: false,
-                  VisibiltyPropertyVillage: false,
-                  VisibiltyPricingDetails: false,
-                  VisibilitySoleProprietor: false,
-                  VisibilityJointHinduProperthy: false,
-                },
-              },
-              required: true,
-              visible: "${data.VisibilityUnit}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelPropertyDetailsDistrict}",
-              name: "OPropertyDistrict",
-              required: true,
-              "data-source": "${data.ListPropertyDistrict}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  ORelationshipToTheApplicant:
-                    "${data.ORelationshipToTheApplicant}",
-                  OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-                  OBeneficiaryFullNameEnglish:
-                    "${data.OBeneficiaryFullNameEnglish}",
-                  ODateOfBirth: "${data.ODateOfBirth}",
-                  OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-                  OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-                  OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-                  OBeneficiarysGender: "${data.OBeneficiarysGender}",
-                  OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-                  OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-                  OBeneficiarySection: "${data.OBeneficiarySection}",
-                  OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-                  OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-                  OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-                  OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-                  OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-                  OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-                  OPurposeOfApplyingForCredit:
-                    "${data.OPurposeOfApplyingForCredit}",
-                  OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-                  OPropertyCategory: "${data.OPropertyCategory}",
-                  OSubCategory: "${data.OSubCategory}",
-                  OPurchasePrice: "${data.OPurchasePrice}",
-                  OTodaysPriceAccMarketPrice:
-                    "${data.OTodaysPriceAccMarketPrice}",
-                  OShare: "${data.OShare}",
-                  OHonorefic: "${data.OHonorefic}",
-                  WitnessFullName: "${data.WitnessFullName}",
-                  OWitnessFullAddress: "${data.OWitnessFullAddress}",
-                  OReasonForTheEstimateValue:
-                    "${data.OReasonForTheEstimateValue}",
-                  OApproval: "${data.OApproval}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  OAppartamentDetails: "${form.OAppartamentDetails}",
-                  OHouseNumber: "${form.OHouseNumber}",
-                  OLocation: "${form.OLocation}",
-                  OArea: "${form.OArea}",
-                  OUnit: "${form.OUnit}",
-                  OPropertyDistrict: "${form.OPropertyDistrict}",
-                  OPropertyTaluka: "${form.OPropertyTaluka}",
-                  OPropertyVillage: "${form.OPropertyVillage}",
-                  OPricingDetails: "${form.OPricingDetails}",
-                  OSoleProprietor: "${form.OSoleProprietor}",
-                  OJointHinduProperty: "${form.OJointHinduProperty}",
-                  onSelectAction: "property-district",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyPropertyDistrict: true,
-                  VisibilityPropertyTaluka: false,
-                  VisibiltyPropertyVillage: false,
-                  VisibiltyPricingDetails: false,
-                  VisibilitySoleProprietor: false,
-                  VisibilityJointHinduProperthy: false,
-                },
-              },
-              visible: "${data.VisibiltyPropertyDistrict}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelpropertyTaltuka}",
-              name: "OPropertyTaluka",
-              required: true,
-              "data-source": "${data.ListPropertyTaluka}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  ORelationshipToTheApplicant:
-                    "${data.ORelationshipToTheApplicant}",
-                  OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-                  OBeneficiaryFullNameEnglish:
-                    "${data.OBeneficiaryFullNameEnglish}",
-                  ODateOfBirth: "${data.ODateOfBirth}",
-                  OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-                  OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-                  OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-                  OBeneficiarysGender: "${data.OBeneficiarysGender}",
-                  OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-                  OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-                  OBeneficiarySection: "${data.OBeneficiarySection}",
-                  OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-                  OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-                  OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-                  OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-                  OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-                  OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-                  OPurposeOfApplyingForCredit:
-                    "${data.OPurposeOfApplyingForCredit}",
-                  OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-                  OPropertyCategory: "${data.OPropertyCategory}",
-                  OSubCategory: "${data.OSubCategory}",
-                  OPurchasePrice: "${data.OPurchasePrice}",
-                  OTodaysPriceAccMarketPrice:
-                    "${data.OTodaysPriceAccMarketPrice}",
-                  OShare: "${data.OShare}",
-                  OHonorefic: "${data.OHonorefic}",
-                  WitnessFullName: "${data.WitnessFullName}",
-                  OWitnessFullAddress: "${data.OWitnessFullAddress}",
-                  OReasonForTheEstimateValue:
-                    "${data.OReasonForTheEstimateValue}",
-                  OApproval: "${data.OApproval}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  OAppartamentDetails: "${form.OAppartamentDetails}",
-                  OHouseNumber: "${form.OHouseNumber}",
-                  OLocation: "${form.OLocation}",
-                  OArea: "${form.OArea}",
-                  OUnit: "${form.OUnit}",
-                  OPropertyDistrict: "${form.OPropertyDistrict}",
-                  OPropertyTaluka: "${form.OPropertyTaluka}",
-                  OPropertyVillage: "${form.OPropertyVillage}",
-                  OPricingDetails: "${form.OPricingDetails}",
-                  OSoleProprietor: "${form.OSoleProprietor}",
-                  OJointHinduProperty: "${form.OJointHinduProperty}",
-                  onSelectAction: "property-taluka",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyPropertyDistrict: true,
-                  VisibilityPropertyTaluka: true,
-                  VisibiltyPropertyVillage: false,
-                  VisibiltyPricingDetails: false,
-                  VisibilitySoleProprietor: false,
-                  VisibilityJointHinduProperthy: false,
-                },
-              },
-              visible: "${data.VisibilityPropertyTaluka}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelPropertyVillage}",
-              name: "OPropertyVillage",
-              required: true,
-              "data-source": "${data.ListPropertyVillage}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  ORelationshipToTheApplicant:
-                    "${data.ORelationshipToTheApplicant}",
-                  OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-                  OBeneficiaryFullNameEnglish:
-                    "${data.OBeneficiaryFullNameEnglish}",
-                  ODateOfBirth: "${data.ODateOfBirth}",
-                  OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-                  OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-                  OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-                  OBeneficiarysGender: "${data.OBeneficiarysGender}",
-                  OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-                  OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-                  OBeneficiarySection: "${data.OBeneficiarySection}",
-                  OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-                  OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-                  OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-                  OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-                  OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-                  OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-                  OPurposeOfApplyingForCredit:
-                    "${data.OPurposeOfApplyingForCredit}",
-                  OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-                  OPropertyCategory: "${data.OPropertyCategory}",
-                  OSubCategory: "${data.OSubCategory}",
-                  OPurchasePrice: "${data.OPurchasePrice}",
-                  OTodaysPriceAccMarketPrice:
-                    "${data.OTodaysPriceAccMarketPrice}",
-                  OShare: "${data.OShare}",
-                  OHonorefic: "${data.OHonorefic}",
-                  WitnessFullName: "${data.WitnessFullName}",
-                  OWitnessFullAddress: "${data.OWitnessFullAddress}",
-                  OReasonForTheEstimateValue:
-                    "${data.OReasonForTheEstimateValue}",
-                  OApproval: "${data.OApproval}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  OAppartamentDetails: "${form.OAppartamentDetails}",
-                  OHouseNumber: "${form.OHouseNumber}",
-                  OLocation: "${form.OLocation}",
-                  OArea: "${form.OArea}",
-                  OUnit: "${form.OUnit}",
-                  OPropertyDistrict: "${form.OPropertyDistrict}",
-                  OPropertyTaluka: "${form.OPropertyTaluka}",
-                  OPropertyVillage: "${form.OPropertyVillage}",
-                  OPricingDetails: "${form.OPricingDetails}",
-                  OSoleProprietor: "${form.OSoleProprietor}",
-                  OJointHinduProperty: "${form.OJointHinduProperty}",
-                  onSelectAction: "property-village",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyPropertyDistrict: true,
-                  VisibilityPropertyTaluka: true,
-                  VisibiltyPropertyVillage: true,
-                  VisibiltyPricingDetails: false,
-                  VisibilitySoleProprietor: false,
-                  VisibilityJointHinduProperthy: false,
-                },
-              },
-              visible: "${data.VisibiltyPropertyVillage}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelPricingDetails}",
-              name: "OPricingDetails",
-              visible: "${data.VisibiltyPricingDetails}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelSoleProprietor}",
-              "helper-text": "${data.HelperSoleProprietor}",
-              name: "OSoleProprietor",
-              visible: "${data.VisibilitySoleProprietor}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelJointHinduProperty}",
-              visible: "${data.VisibilityJointHinduProperthy}",
-              name: "OJointHinduProperty",
-              "helper-text": "${data.HelperJointHinduProperty}",
-              type: "TextInput",
-            },
-            {
-              "on-click-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  BENEFICIARY: "${screen.BENEFICIARY.form}",
-                  ORelationshipToTheApplicant:
-                    "${data.ORelationshipToTheApplicant}",
-                  OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-                  OBeneficiaryFullNameEnglish:
-                    "${data.OBeneficiaryFullNameEnglish}",
-                  ODateOfBirth: "${data.ODateOfBirth}",
-                  OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-                  OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-                  OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-                  OBeneficiarysGender: "${data.OBeneficiarysGender}",
-                  OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-                  OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-                  OBeneficiarySection: "${data.OBeneficiarySection}",
-                  OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-                  OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-                  OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-                  OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-                  OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-                  OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-                  OPurposeOfApplyingForCredit:
-                    "${data.OPurposeOfApplyingForCredit}",
-                  OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-                  OPropertyCategory: "${data.OPropertyCategory}",
-                  OSubCategory: "${data.OSubCategory}",
-                  OPurchasePrice: "${data.OPurchasePrice}",
-                  OTodaysPriceAccMarketPrice:
-                    "${data.OTodaysPriceAccMarketPrice}",
-                  OShare: "${data.OShare}",
-                  OHonorefic: "${data.OHonorefic}",
-                  WitnessFullName: "${data.WitnessFullName}",
-                  OWitnessFullAddress: "${data.OWitnessFullAddress}",
-                  OReasonForTheEstimateValue:
-                    "${data.OReasonForTheEstimateValue}",
-                  OApproval: "${data.OApproval}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  OAppartamentDetails: "${form.OAppartamentDetails}",
-                  OHouseNumber: "${form.OHouseNumber}",
-                  OLocation: "${form.OLocation}",
-                  OArea: "${form.OArea}",
-                  OUnit: "${form.OUnit}",
-                  OPropertyDistrict: "${form.OPropertyDistrict}",
-                  OPropertyTaluka: "${form.OPropertyTaluka}",
-                  OPropertyVillage: "${form.OPropertyVillage}",
-                  OPricingDetails: "${form.OPricingDetails}",
-                  OSoleProprietor: "${form.OSoleProprietor}",
-                  OJointHinduProperty: "${form.OJointHinduProperty}",
-                  onSelectAction: "confirm-property",
-                },
-              },
-              text: "${data.EmmbededLinkAppartmentDetails}",
-              visible: "${data.VisibilityConfirmAppartmentDetails}",
-              type: "EmbeddedLink",
-            },
-          ],
-          Bungalow: [
-            {
-              label: "${data.LabelHouseNoPropertyNoBungalow}",
-              name: "OHouseNoPropertyNoBungalow",
-              "min-chars": 1,
-              "max-chars": 20,
-              visible: "${data.VisibiltyHouseNoPropertyNoBungalow}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelLocationBungalow}",
-              name: "OLocationBungalow",
-              visible: "${data.VisibiltyLocationBungalow}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelAreaBungalow}",
-              name: "OAreaBungalow",
-              required: true,
-              "input-type": "number",
-              "min-chars": 1,
-              "max-chars": 10,
-              visible: "${data.VisibiltyAreaBungalow}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelUnitBungalowDetails}",
-              name: "OUnitBungalowDetails",
-              required: true,
-              "data-source": "${data.ListUnitBungalowDetails}",
-              visible: "${data.VisibilityUnitBungalowDetails}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelPricingDetailsBungalow}",
-              name: "OPricingDetailsBungalow",
-              visible: "${data.VisibiltyPricingDetailsBungalow}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelDistrictDetailsBungalow}",
-              name: "ODistrictDetailsBungalow",
-              required: true,
-              "data-source": "${data.ListDistrictDetailsBungalow}",
-              visible: "${data.VisibilityDistrictDetailsBungalow}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  onSelectAction: "District-Details-Bungalow",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityDistrictDetailsBungalow: true,
-                  VisibilityTalukaDetailsBungalow: false,
-                  VisibilityVillageDetailsBungalow: false,
-                  VisibilityBusinessOwnershipInfoDetailsBungalow: false,
-                  VisibiltyjointHinduPropertyDetailsBungalow: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelTalukaDetailsBungalow}",
-              name: "OTalukaDetailsBungalow",
-              required: true,
-              "data-source": "${data.ListTalukaDetailsBungalow}",
-              visible: "${data.VisibilityTalukaDetailsBungalow}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  onSelectAction: "Taluka-Details-Bungalow",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityDistrictDetailsBungalow: true,
-                  VisibilityTalukaDetailsBungalow: true,
-                  VisibilityVillageDetailsBungalow: false,
-                  VisibilityBusinessOwnershipInfoDetailsBungalow: false,
-                  VisibiltyjointHinduPropertyDetailsBungalow: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelVillageDetailsBungalow}",
-              name: "OVillageDetailsBungalow",
-              required: true,
-              "data-source": "${data.ListVillageDetailsBungalow}",
-              visible: "${data.VisibilityVillageDetailsBungalow}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  onSelectAction: "Village-Details-Bungalow",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityDistrictDetailsBungalow: true,
-                  VisibilityTalukaDetailsBungalow: true,
-                  VisibilityVillageDetailsBungalow: true,
-                  VisibilityBusinessOwnershipInfoDetailsBungalow: false,
-                  VisibiltyjointHinduPropertyDetailsBungalow: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelbusinessOwnershipInfoDetailsBungalow}",
-              name: "ObusinessOwnershipInfoDetailsBungalow",
-              visible: "${data.VisibilityBusinessOwnershipInfoDetailsBungalow}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabeljointHinduPropertyDetailsBungalow}",
-              name: "OjointHinduPropertyDetailsBungalow",
-              visible: "${data.VisibiltyjointHinduPropertyDetailsBungalow}",
-              type: "TextInput",
-            },
-          ],
-          Shop: [
-            {
-              label: "${data.LabelSurveyNoShop}",
-              name: "OSurveyNoShop",
-              "min-chars": 1,
-              "max-chars": 24,
-              visible: "${data.VisibiltySurveyNoShop}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelAreaShop}",
-              name: "OAreaShop",
-              required: true,
-              "input-type": "number",
-              "min-chars": 1,
-              "max-chars": 10,
-              visible: "${data.VisibiltyAreaShop}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelUnitShop}",
-              name: "OUnitShop",
-              required: true,
-              "data-source": "${data.ListUnitShop}",
-              visible: "${data.VisibilityUnitShop}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  OUnitShop: "${form.OUnitShop}",
-                  onSelectAction: "Unit-Shop",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyLocationShop: false,
-                  VisibilityDistrictShop: false,
-                  VisibilityTalukaShop: false,
-                  VisibilityVillageShop: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelLocationShop}",
-              name: "OLocationShop",
-              visible: "${data.VisibiltyLocationShop}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelDistrictShop}",
-              name: "ODistrictShop",
-              required: true,
-              "data-source": "${data.ListDistrictShop}",
-              visible: "${data.VisibilityDistrictShop}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  OUnitShop: "${form.OUnitShop}",
-                  ODistrictShop: "${form.ODistrictShop}",
-                  onSelectAction: "District-Shop",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyLocationShop: true,
-                  VisibilityDistrictShop: true,
-                  VisibilityTalukaShop: false,
-                  VisibilityVillageShop: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelTalukaShop}",
-              name: "OTalukaShop",
-              required: true,
-              "data-source": "${data.ListTalukaShop}",
-              visible: "${data.VisibilityTalukaShop}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  OUnitShop: "${form.OUnitShop}",
-                  ODistrictShop: "${form.ODistrictShop}",
-                  OTalukaShop: "${form.OTalukaShop}",
-                  onSelectAction: "Taluka-Shop",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyLocationShop: true,
-                  VisibilityDistrictShop: true,
-                  VisibilityTalukaShop: true,
-                  VisibilityVillageShop: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelVillageShop}",
-              name: "OVillageShop",
-              required: true,
-              "data-source": "${data.ListVillageShop}",
-              visible: "${data.VisibilityVillageShop}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  OUnitShop: "${form.OUnitShop}",
-                  ODistrictShop: "${form.ODistrictShop}",
-                  OTalukaShop: "${form.OTalukaShop}",
-                  OVillageShop: "${form.OVillageShop}",
-                  onSelectAction: "Village-Shop",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibiltyLocationShop: true,
-                  VisibilityDistrictShop: true,
-                  VisibilityTalukaShop: true,
-                  VisibilityVillageShop: true,
-                },
-              },
-              type: "Dropdown",
-            },
-          ],
-          Land: [
-            {
-              label: "${data.LabelSurveyNoLand}",
-              name: "OSurveyNoLand",
-              visible: "${data.VisibiltySurveyNoLand}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelLocationLand}",
-              name: "OLocationLand",
-              visible: "${data.VisibiltyLocationLand}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelAreaLand}",
-              name: "OAreaLand",
-              "input-type": "number",
-              "min-chars": 1,
-              "max-chars": 10,
-              required: true,
-              visible: "${data.VisibiltyAreaLand}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelUnitLand}",
-              name: "OUnitLand",
-              required: true,
-              "data-source": "${data.ListUnitLand}",
-              visible: "${data.VisibilityUnitLand}",
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelPricingLand}",
-              name: "OPricingLand",
-              visible: "${data.VisibiltyPricingLand}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabelDistrictLand}",
-              name: "ODistrictLand",
-              required: true,
-              "data-source": "${data.ListDistrictLand}",
-              visible: "${data.VisibilityDistrictLand}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  ODistrictLand: "${form.ODistrictLand}",
-                  OPricingLand: "${form.OPricingLand}",
-                  OUnitLand: "${form.OUnitLand}",
-                  OAreaLand: "${form.OAreaLand}",
-                  OLocationLand: "${form.OLocationLand}",
-                  OSurveyNoLand: "${form.OSurveyNoLand}",
-                  onSelectAction: "District-Land",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityTalukaLand: false,
-                  VisibilityVillageLand: false,
-                  VisibilityBusinessOwnershipInfoLand: false,
-                  VisibiltyjointHinduPropertyLand: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelTalukaLand}",
-              name: "OTalukaLand",
-              required: true,
-              "data-source": "${data.ListTalukaLand}",
-              visible: "${data.VisibilityTalukaLand}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  ODistrictLand: "${form.ODistrictLand}",
-                  OPricingLand: "${form.OPricingLand}",
-                  OTalukaLand: "${form.OTalukaLand}",
-                  OUnitLand: "${form.OUnitLand}",
-                  OAreaLand: "${form.OAreaLand}",
-                  OLocationLand: "${form.OLocationLand}",
-                  OSurveyNoLand: "${form.OSurveyNoLand}",
-                  onSelectAction: "Taluka-Land",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityTalukaLand: true,
-                  VisibilityVillageLand: false,
-                  VisibilityBusinessOwnershipInfoLand: false,
-                  VisibiltyjointHinduPropertyLand: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelVillageLand}",
-              name: "OVillageLand",
-              required: true,
-              "data-source": "${data.ListVillageLand}",
-              visible: "${data.VisibilityVillageLand}",
-              "on-select-action": {
-                name: "data_exchange",
-                payload: {
-                  WELCOME: "${screen.WELCOME.form}",
-                  OAddress: "${data.OAddress}",
-                  OFathersHusbandName: "${data.OFathersHusbandName}",
-                  OPanCard: "${data.OPanCard}",
-                  OSalutation: "${data.OSalutation}",
-                  OFullNameEnglish: "${data.OFullNameEnglish}",
-                  OFullNameMarathi: "${data.OFullNameMarathi}",
-                  OFathersSalutation: "${data.OFathersSalutation}",
-                  OFathersNameEnglish: "${data.OFathersNameEnglish}",
-                  OFathersNameMarathi: "${data.OFathersNameMarathi}",
-                  ODOB: "${data.ODOB}",
-                  OAge: "${data.OAge}",
-                  OMobileNumber: "${data.OMobileNumber}",
-                  OGender: "${data.OGender}",
-                  OEmailID: "${data.OEmailID}",
-                  OOccupation: "${data.OOccupation}",
-                  OAdharNumber: "${data.OAdharNumber}",
-                  OApplicantNationality: "${data.OApplicantNationality}",
-                  extraDetails: "${data.extraDetails}",
-                  ODistrictDetailsBungalow: "${form.ODistrictDetailsBungalow}",
-                  OTalukaDetailsBungalow: "${form.OTalukaDetailsBungalow}",
-                  ODistrictLand: "${form.ODistrictLand}",
-                  OTalukaLand: "${form.OTalukaLand}",
-                  OVillageLand: "${form.OVillageLand}",
-                  OVillageDetailsBungalow: "${form.OVillageDetailsBungalow}",
-                  onSelectAction: "Village-Land",
-                },
-              },
-              "on-unselect-action": {
-                name: "update_data",
-                payload: {
-                  VisibilityTalukaLand: true,
-                  VisibilityVillageLand: true,
-                  VisibilityBusinessOwnershipInfoLand: false,
-                  VisibiltyjointHinduPropertyLand: false,
-                },
-              },
-              type: "Dropdown",
-            },
-            {
-              label: "${data.LabelbusinessOwnershipInfoLand}",
-              name: "ObusinessOwnershipInfoLand",
-              visible: "${data.VisibilityBusinessOwnershipInfoLand}",
-              type: "TextInput",
-            },
-            {
-              label: "${data.LabeljointHinduPropertyLand}",
-              name: "OjointHinduPropertyLand",
-              visible: "${data.VisibiltyjointHinduPropertyLand}",
-              type: "TextInput",
-            },
-          ],
-        },
-        type: "Switch",
-      },
-      {
-        "on-click-action": {
-          name: "data_exchange",
-          payload: {
-            WELCOME: "${screen.WELCOME.form}",
-            BENEFICIARY: "${screen.BENEFICIARY.form}",
-            ORelationshipToTheApplicant: "${data.ORelationshipToTheApplicant}",
-            OBeneficiarySalutation: "${data.OBeneficiarySalutation}",
-            OBeneficiaryFullNameEnglish: "${data.OBeneficiaryFullNameEnglish}",
-            ODateOfBirth: "${data.ODateOfBirth}",
-            OBeneficiaryMobileNmber: "${data.OBeneficiaryMobileNmber}",
-            OBeneficiaryEmail: "${data.OBeneficiaryEmail}",
-            OBeneficiaryAadharNumber: "${data.OBeneficiaryAadharNumber}",
-            OBeneficiarysGender: "${data.OBeneficiarysGender}",
-            OBeneficiaryRAddress: "${data.OBeneficiaryRAddress}",
-            OBeneficiaryRBuilding: "${data.OBeneficiaryRBuilding}",
-            OBeneficiarySection: "${data.OBeneficiarySection}",
-            OBeneficiaryRStreet: "${data.OBeneficiaryRStreet}",
-            OBeneficiaryRLandmark: "${data.OBeneficiaryRLandmark}",
-            OBeneficiaryRDistrict: "${data.OBeneficiaryRDistrict}",
-            OBeneficiaryRTaluka: "${data.OBeneficiaryRTaluka}",
-            OBeneficiarysRpinCode: "${data.OBeneficiarysRpinCode}",
-            OBeneficiaryRVillage: "${data.OBeneficiaryRVillage}",
-            OPurposeOfApplyingForCredit: "${data.OPurposeOfApplyingForCredit}",
-            OAmmountOfCreditApplied: "${data.OAmmountOfCreditApplied}",
-            OPropertyCategory: "${data.OPropertyCategory}",
-            OSubCategory: "${data.OSubCategory}",
-            OPurchasePrice: "${data.OPurchasePrice}",
-            OTodaysPriceAccMarketPrice: "${data.OTodaysPriceAccMarketPrice}",
-            OShare: "${data.OShare}",
-            OHonorefic: "${data.OHonorefic}",
-            WitnessFullName: "${data.WitnessFullName}",
-            OWitnessFullAddress: "${data.OWitnessFullAddress}",
-            OReasonForTheEstimateValue: "${data.OReasonForTheEstimateValue}",
-            OApproval: "${data.OApproval}",
-            OAddress: "${data.OAddress}",
-            OFathersHusbandName: "${data.OFathersHusbandName}",
-            OPanCard: "${data.OPanCard}",
-            OSalutation: "${data.OSalutation}",
-            OFullNameEnglish: "${data.OFullNameEnglish}",
-            OFullNameMarathi: "${data.OFullNameMarathi}",
-            OFathersSalutation: "${data.OFathersSalutation}",
-            OFathersNameEnglish: "${data.OFathersNameEnglish}",
-            OFathersNameMarathi: "${data.OFathersNameMarathi}",
-            ODOB: "${data.ODOB}",
-            OAge: "${data.OAge}",
-            OMobileNumber: "${data.OMobileNumber}",
-            OGender: "${data.OGender}",
-            OEmailID: "${data.OEmailID}",
-            OOccupation: "${data.OOccupation}",
-            OAdharNumber: "${data.OAdharNumber}",
-            OApplicantNationality: "${data.OApplicantNationality}",
-            extraDetails: "${data.extraDetails}",
-            OAppartamentDetails: "${form.OAppartamentDetails}",
-            OHouseNumber: "${form.OHouseNumber}",
-            OLocation: "${form.OLocation}",
-            OArea: "${form.OArea}",
-            OUnit: "${form.OUnit}",
-            OPropertyDistrict: "${form.OPropertyDistrict}",
-            OPropertyTaluka: "${form.OPropertyTaluka}",
-            OPropertyVillage: "${form.OPropertyVillage}",
-            OPricingDetails: "${form.OPricingDetails}",
-            OSoleProprietor: "${form.OSoleProprietor}",
-            OJointHinduProperty: "${form.OJointHinduProperty}",
-          },
-        },
-        label: "${data.LabelFooterDetailedPropertyDetailsScreen}",
-        enabled: "${data.EnableFooterDetailsPropertyDetailsScreen}",
-        type: "Footer",
-      },
-    ],
-  },
-  terminal: true,
+
+
+// const flowsOutput = {{flowsOutput}}
+// const TOKEN = {{tokenHTTP}}.data
+
+
+// const getRTSUserDetails = {{getRTSUserDetails}}.data;
+
+const _DivisionID = getRTSUserDetails.DivisionID;
+
+const _OSalutation =  JSON.parse(flowsOutput.WELCOME.OSalutation).Value;
+const _OFatherSalutation = JSON.parse(flowsOutput.WELCOME.OFatherSalutation).Value;
+const _OGender = JSON.parse(flowsOutput.WELCOME.OGender).Name;
+const _OOccupation = JSON.parse(flowsOutput.WELCOME.OOccupation).Value;
+const _ODistrict = JSON.parse(flowsOutput.WELCOME.ODistrict).Districtcode;
+const _OTaluka = JSON.parse(flowsOutput.WELCOME.OTaluka).SubDistrictcode;
+const _OVillage = JSON.parse(flowsOutput.WELCOME.OVillage).Villagecode;
+
+const _ORelationOfApplicantWithBeneficiary = JSON.parse(flowsOutput.BENEFICIARY.ORelationOfApplicantWithBeneficiary).Value;
+const _OBenefPreAddressRadio = flowsOutput.BENEFICIARY.OBenefPreAddressRadio;//JSON.parse(flowsOutput.BENEFICIARY.OBenefPreAddressRadio).title;
+const _OBirthAddressAsAbove = flowsOutput.BENEFICIARY.OBirthAddressAsAbove;//JSON.parse(flowsOutput.BENEFICIARY.OBirthAddressAsAbove).title;
+const _OBirthDistrict = flowsOutput?.BENEFICIARY?.OBirthDistrict ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthDistrict)?.districtCode || "") : "";//JSON.parse(flowsOutput.BENEFICIARY.OBirthDistrict).districtCode ?? "";
+const _OBirthTaluka = flowsOutput?.BENEFICIARY?.OBirthTaluka ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthTaluka)?.SubDistrictcode || "") : "";//JSON.parse(flowsOutput.BENEFICIARY.OBirthTaluka).SubDistrictcode ?? "";
+const _OBirthVillage = flowsOutput?.BENEFICIARY?.OBirthVillage ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthVillage)?.Villagecode || "") : "";//JSON.parse(flowsOutput.BENEFICIARY.OBirthVillage).Villagecode ?? "";
+// const _OBirthDistrict = flowsOutput?.BENEFICIARY?.OBirthDistrict ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthDistrict)?.districtCode || "") : "";
+// const _OBirthTaluka = flowsOutput?.BENEFICIARY?.OBirthTaluka ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthTaluka)?.SubDistrictcode || "") : "";
+// const _OBirthVillage = flowsOutput?.BENEFICIARY?.OBirthVillage ? (JSON.parse(flowsOutput.BENEFICIARY.OBirthVillage)?.Villagecode || "") : "";
+
+
+
+const _ODistrictBenefPre = flowsOutput?.Beneficiary_Present_Address?.ODistrictBenefPre ? (JSON.parse(flowsOutput.Beneficiary_Present_Address.ODistrictBenefPre)?.districtCode || "") : "";
+const _OTalukaBenefPre = flowsOutput?.Beneficiary_Present_Address?.OTalukaBenefPre ? (JSON.parse(flowsOutput.Beneficiary_Present_Address.OTalukaBenefPre)?.SubDistrictcode || "") : "";
+const _OVillageBenefPre = flowsOutput?.Beneficiary_Present_Address?.OVillageBenefPre ? (JSON.parse(flowsOutput.Beneficiary_Present_Address.OVillageBenefPre)?.Villagecode || "") : "";
+// const _ODistrictBenefPre = JSON.parse(flowsOutput.Beneficiary_Present_Address.ODistrictBenefPre).districtCode;
+// const _OTalukaBenefPre = JSON.parse(flowsOutput.Beneficiary_Present_Address.OTalukaBenefPre).SubDistrictcode;
+// const _OVillageBenefPre = JSON.parse(flowsOutput.Beneficiary_Present_Address.OVillageBenefPre).Villagecode;
+
+const _OIsMarriedWoman = JSON.parse(flowsOutput.WOMAN_MARRIED.OIsMarriedWoman).value;
+const _OAddressBeforeMerriage = JSON.parse(flowsOutput.WOMAN_MARRIED.OAddressBeforeMerriage).title;
+const _OFilloutDistrict = JSON.parse(flowsOutput.WOMAN_MARRIED.OFilloutDistrict).districtCode;
+const _OFilloutTaluka = JSON.parse(flowsOutput.WOMAN_MARRIED.OFilloutTaluka).SubDistrictcode;
+const _OFilloutVillage = JSON.parse(flowsOutput.WOMAN_MARRIED.OFilloutVillage).Villagecode;
+const _OOccupationofHusband = JSON.parse(flowsOutput.WOMAN_MARRIED.OOccupationofHusband).Value;
+const _ORadioAddressAfterMarriedWomen = JSON.parse(flowsOutput.WOMAN_MARRIED.ORadioAddressAfterMarriedWomen).title;
+
+
+const _ODistrictAfterMarriedWomen = flowsOutput?.WOMAN_MARRIED?.ODistrictAfterMarriedWomen ? (JSON.parse(flowsOutput.WOMAN_MARRIED.ODistrictAfterMarriedWomen)?.districtCode || "") : "";
+const _OTalukaAfterMarriedWomen = flowsOutput?.WOMAN_MARRIED?.OTalukaAfterMarriedWomen ? (JSON.parse(flowsOutput.WOMAN_MARRIED.OTalukaAfterMarriedWomen)?.SubDistrictcode || "") : "";
+const _OVillageAfterMarriedWomen = flowsOutput?.WOMAN_MARRIED?.OVillageAfterMarriedWomen ? (JSON.parse(flowsOutput.WOMAN_MARRIED.OVillageAfterMarriedWomen)?.Villagecode || "") : "";
+// const _ODistrictAfterMarriedWomen = JSON.parse(flowsOutput.WOMAN_MARRIED.ODistrictAfterMarriedWomen).districtCode;
+// const _OTalukaAfterMarriedWomen = JSON.parse(flowsOutput.WOMAN_MARRIED.OTalukaAfterMarriedWomen).SubDistrictcode;
+// const _OVillageAfterMarriedWomen = flowsOutput.WOMAN_MARRIED.OVillageAfterMarriedWomen && JSON.parse(flowsOutput.WOMAN_MARRIED.OVillageAfterMarriedWomen).Villagecode;
+
+
+// Optional May not came in some cases
+const _OMigratedFromDifferentState = flowsOutput.MIGRATION.OMigratedFromDifferentState && JSON.parse(flowsOutput.MIGRATION.OMigratedFromDifferentState).Value;
+const _OPropertyDistrict = flowsOutput.MIGRATION.OPropertyDistrict && JSON.parse(flowsOutput.MIGRATION.OPropertyDistrict).districtCode;
+const _OPropertyTaluka = flowsOutput.MIGRATION.OPropertyTaluka && JSON.parse(flowsOutput.MIGRATION.OPropertyTaluka).SubDistrictcode 
+const _OPropertyVillage = flowsOutput.MIGRATION.OPropertyVillage && JSON.parse(flowsOutput.MIGRATION.OPropertyVillage).Villagecode;
+const _OWhetherApplicantIsBeneficiaryOfGovScheme = flowsOutput.MIGRATION.OWhetherApplicantIsBeneficiaryOfGovScheme && JSON.parse(flowsOutput.MIGRATION.OWhetherApplicantIsBeneficiaryOfGovScheme).Name
+const _OOtherDistrictyes = flowsOutput.MIGRATION.OOtherDistrictyes && JSON.parse(flowsOutput.MIGRATION.OOtherDistrictyes).districtCode;
+const _OYesOtherDistrictTaluka = flowsOutput.MIGRATION.OYesOtherDistrictTaluka && JSON.parse(flowsOutput.MIGRATION.OYesOtherDistrictTaluka).SubDistrictcode;
+const _OLabelYesOtherVillage = flowsOutput.MIGRATION.OLabelYesOtherVillage && JSON.parse(flowsOutput.MIGRATION.OLabelYesOtherVillage).Villagecode;
+const _OYearsOfResidenceAtCurrentAddress = flowsOutput.BENEFICIARY.OYearsOfResidenceAtCurrentAddress && JSON.parse(flowsOutput.BENEFICIARY.OYearsOfResidenceAtCurrentAddress).Name
+
+
+//extraDetails Parsed...
+const parsedExtraDetails = JSON.parse(flowsOutput.extraDetails);
+// ------------------- education-details ---------------------
+const extraDetails = JSON.parse(flowsOutput.extraDetails);
+const _ListEducationDetailsofBeneficiaryModel = (extraDetails.addDetailsArray || []).map(entry => {
+  const uuid = entry.id.split("|")[1];
+  const universityMatch = entry.description.match(/संस्थेचे नाव: (.+)/);
+  const admissionMatch = entry.description.match(/प्रवेश वर्ष: (\d+)/);
+  const completionMatch = entry.description.match(/पूर्णता वर्ष: (\d+)/);
+  const instituteMatch = entry.description.match(/शैक्षणिक ठिकाण: (.+)/);
+
+  return {
+    EducationDetailsofBeneficiary: uuid,
+    University: universityMatch ? universityMatch[1].trim() : '',
+    AdmissionYear: admissionMatch ? admissionMatch[1] : '',
+    CompletionYear: completionMatch ? completionMatch[1] : '',
+    InstituteDetails: instituteMatch ? instituteMatch[1].trim() : ''
+  };
+});
+// ------------------- education-details ---------------------
+
+// ------------------- MIGRATION ---------------------
+const _ListMigrationDetailsofBeneficiaryModel = (extraDetails.addMigrations || []).map(entry => {
+  const migrationPlaceMatch = entry.description.match(/स्थलांतराचे ठिकाण: (.+)/);
+  const fromYearMatch = entry.description.match(/वर्षापासून: (\d+)/);
+  const toYearMatch = entry.description.match(/ते वर्ष: (\d+)/);
+
+  return {
+    MigrationPlace: migrationPlaceMatch ? migrationPlaceMatch[1].trim() : '',
+    FromYear: fromYearMatch ? fromYearMatch[1] : '',
+    ToYear: toYearMatch ? toYearMatch[1] : ''
+  };
+});
+// ------------------- MIGRATION ---------------------
+
+// ------------------- Family Details ---------------------
+const _ListApplicantFamilyResidantDetailsModel = (extraDetails.addFamilyDetails || []).map(entry => {
+  const uuid = entry.id.split("|")[1];
+
+  const relationMatch = entry.description.match(/संबंध: (.+?)\s/);
+  const nameMatch = entry.description.match(/कुटुंबातील सदस्याचे नाव: (.+)/);
+
+  return {
+    ApplicantFamilyResidantDetails: uuid,
+    Relation: relationMatch ? relationMatch[1].trim() : '',
+    FamilyMemberName: nameMatch ? nameMatch[1].trim() : ''
+  };
+});
+// ------------------- Family Details ---------------------
+
+const LangID = JSON.parse(flowsOutput.extraDetails).locale
+// const ServiceId = "1253"
+const CertificateName = JSON.parse(flowsOutput.WELCOME.OCertificateName).Name;
+const ServiceName = CertificateName;//"Age Domicile Certificate";
+const UserID = "224a14e9-33e8-4c5a-8d48-fe20d26769f6";
+const DivisionId = _DivisionID;
+const CertificateType = JSON.parse(flowsOutput.WELCOME.OCertificateName).Name;//"Certificate of Age and Domicile";
+const CertificateTypeCode = JSON.parse(flowsOutput.WELCOME.OCertificateName).Value;
+const ApplicantSalutation = _OSalutation;
+const ApplicantNameEnglish = flowsOutput.WELCOME.OFullNameEnglish?? "";
+const ApplicantNameMarathi = flowsOutput.WELCOME.OFullNameMarathi;
+const ApplicantFatherSalutation = _OFatherSalutation;
+const ApplicantFatherNameEnglish = flowsOutput.WELCOME.OFatherNameEnglish;
+const ApplicantFatherNameMarathi = flowsOutput.WELCOME.OFatherNameMarathi;
+const ApplicantDOB = flowsOutput.WELCOME.ODateOfBirth;
+const ApplicantAge = flowsOutput.WELCOME.OAge;
+const ApplicantMobileNo = flowsOutput.WELCOME.OMobileNumber;
+const ApplicantGender = _OGender;
+const ApplicantEmailID = flowsOutput.WELCOME.OEmailId;
+const ApplicantOccupation = _OOccupation;
+const ApplicantNationality = "INDIAN";
+const ResidingAtPresentAddressSince = '2023';
+const ApplicantAddress = flowsOutput.WELCOME.OAddress;
+const ApplicantBuilding = flowsOutput.WELCOME.OBuilding;
+const ApplicantSection = flowsOutput.WELCOME.OSection;
+const ApplicantStreet = flowsOutput.WELCOME.OAddress;
+const ApplicantLandmark = flowsOutput.WELCOME.OLandmark;
+const ApplicantStateCode = "27";
+const ApplicantDistrictCode = _ODistrict;
+const ApplicantSubDistrictCode = _OTaluka;
+const ApplicantVillageCode = _OVillage;
+const ApplicantPinCode = flowsOutput.WELCOME.OPincode;
+const BeneficiaryResidingCurrentAddress = _OYearsOfResidenceAtCurrentAddress; //need to handle
+const ApplicantResidingMaharashtra = flowsOutput.BENEFICIARY.OApplicantResidingInMaharahtra;
+const ApplicantRelationWithBeneficiary = _ORelationOfApplicantWithBeneficiary;
+const BeneficiarySalutation = flowsOutput.BENEFICIARY.OBeneficiarySalutation;
+const BeneficiaryName = flowsOutput.BENEFICIARY.OBeneficiaryFullName;
+const BeneficiaryDOB = flowsOutput.BENEFICIARY.OBenificaryDateofBirth;
+const BeneficiaryMobile = flowsOutput.BENEFICIARY.OBeneficiaryMobileNumber;
+const PresentAddressSameAsAbove = _OBenefPreAddressRadio;
+const PresentAddress = flowsOutput.Beneficiary_Present_Address.OAddressBenefPre ?? "";
+const PresentBuilding = flowsOutput.Beneficiary_Present_Address.OBuildingBenefPre ?? "";
+const PresentSection = flowsOutput.Beneficiary_Present_Address.OSectionBenefPre ?? "";
+const PresentStreet = flowsOutput.Beneficiary_Present_Address.OStreetBenefPre ?? "";
+const PresentLandmark = flowsOutput.Beneficiary_Present_Address.OLandmarkBenefPre ?? "";
+const PresentDistrictCode = _ODistrictBenefPre;
+const PresentSubDistrictCode = _OTalukaBenefPre;
+const PresentVillageCode = _OVillageBenefPre;
+const PresentPinCode = flowsOutput.Beneficiary_Present_Address.OLandmarkBenefPre ?? ""; //parsedExtraDetails.OPincodeBenefPre;
+const BirthAddressSameAsAbove = _OBirthAddressAsAbove;
+const BirthAddress = flowsOutput.BENEFICIARY.OBirthAddress ?? "";
+const BirthBuilding = flowsOutput.BENEFICIARY.OBirthBuilding;
+const BirthSection = flowsOutput.BENEFICIARY.OBirthSection;
+const BirthStreet = flowsOutput.BENEFICIARY.OBirthStreet;
+const BirthStateCode = "27";
+const BirthDistrictCode = _OBirthDistrict;
+const BirthSubDistrictCode = _OBirthTaluka;
+const BirthVillageCode = _OBirthVillage;
+const BirthPinCode = flowsOutput.BENEFICIARY.OBirthPincode ?? "";
+const ListEducationDetailsofBeneficiaryModel = _ListEducationDetailsofBeneficiaryModel;
+
+const IsBeneficiaryaMarriedWoman = _OIsMarriedWoman;
+const MaidenName = parsedExtraDetails.OMariedWomanMiddleName;
+const MarriageDate = flowsOutput.WOMAN_MARRIED.OMarriageDate;
+const AddressBeforeMarriageSameasSbove = _OAddressBeforeMerriage;
+const BeforeMarriageAddress = flowsOutput.WOMAN_MARRIED.OFillOutAddress;
+const BeforeMarriageBuilding = parsedExtraDetails.OFillOutBuildingName;
+const BeforeMarriageSection = parsedExtraDetails.OFillOutSectionName;
+const BeforeMarriageStreet = parsedExtraDetails.OFillOutStreetName;
+const BeforeMarriageLandmark = parsedExtraDetails.OFillOutLandmarkName;
+const BeforeMarriageDistrictCode = _OFilloutDistrict;
+const BeforeMarriageSubDistrictCode = _OFilloutTaluka;
+const BeforeMarriageVillageCode = _OFilloutVillage;
+const BeforeMarriagePinCode = flowsOutput.WOMAN_MARRIED.OFillOutPincode;
+const PlacewhereMarriageWasRegistered = parsedExtraDetails.OPlacewheremarriagewasregistered;
+const PostMarriageNameAlongWithHusbandName = parsedExtraDetails.OPostMarriagename;
+const ResidingPeriodBeforMarriageAndNoofYear = flowsOutput.WOMAN_MARRIED.OResidingBeforMarriageYear;
+const PlaceofBirthofHusband = parsedExtraDetails.OPlaceofBirthofHusband;
+const DateofBirthofHusband = flowsOutput.WOMAN_MARRIED.ODateofBirthofHusband;
+const OccupationofHusband = _OOccupationofHusband;
+const HusbandName = parsedExtraDetails.OMariedWomanHusbandName;
+const AddressAfterMarriageSameasAbove = _ORadioAddressAfterMarriedWomen;
+const AfterMarriageAddress = parsedExtraDetails.OAddressAfterMarriedWomen;
+const AfterMarriageBuilding = parsedExtraDetails.OBuildingNameAfterMarriedWomen;
+const AfterMarriageSection = parsedExtraDetails.OSectionNameAfterMarriedWomen;
+const AfterMarriageStreet = parsedExtraDetails.OStreetNameAfterMarriedWomen;
+const AfterMarriageLandmark = parsedExtraDetails.OLandmarkNameAfterMarriedWomen;
+const AfterMarriageDistrictCode = _ODistrictAfterMarriedWomen;
+const AfterMarriageSubDistrictCode = _OTalukaAfterMarriedWomen;
+const AfterMarriageVillageCode = _OVillageAfterMarriedWomen;
+const AfterMarriagePinCode = flowsOutput.WOMAN_MARRIED.OPincodeAfterMarriedWomen?? "";
+const HasBeneficiaryMigratedFromDifferentState = _OMigratedFromDifferentState;
+const YearsOfResidenceInMaharashtra = flowsOutput.MIGRATION.OYearsOfResidenceInMaharashtra;
+const FamilyNativePlaceBeforeMigrationToMaharashtra = flowsOutput.MIGRATION.ONativePlaceBeforeMigration;
+const ReasonforMigration = flowsOutput.MIGRATION.OReasonformigration;
+const ListMigrationDetailsofBeneficiaryModel = _ListMigrationDetailsofBeneficiaryModel;
+
+const DetailsOfMovablePropertyBelongToApplicantFatherhusbandInMaharashtra = flowsOutput.MIGRATION.ODetailsOfMovableProperty;
+const PropertyAddress = flowsOutput.MIGRATION.OPropertyAddress;
+const PropertyBuilding = parsedExtraDetails.OPropertyBuilding;
+const PropertySection = parsedExtraDetails.OPropertySection;
+const PropertyStreet = parsedExtraDetails.OPropertyStreet;
+const PropertyLandmark = parsedExtraDetails.OPropertyLandMark;
+const PropertyDistrictCode = _OPropertyDistrict;
+const PropertySubDistrictCode = _OPropertyTaluka;
+const PropertyVillageCode = _OPropertyVillage;
+const PropertyPinCode = flowsOutput.MIGRATION.OPropertyPinCode;
+const PropertyHolderRelationwithBeneficiary = "aa6f3900-f4f0-43df-92ba-2433093a2f42"; //need to handle
+const PropertyDetail = flowsOutput.MIGRATION.OPropertyDetails;
+const Beneficiaryfatherhusbandplaceofresidence = parsedExtraDetails.OBeneficiaryFatherHusbandPlaceOfResidence
+const Atthetimeofbirthofthebeneficiaryplaceofresidenceoffather = parsedExtraDetails.OAtthetimeofbirthofthebeneficiary;
+const IfBeneficiaryfatherhusbandisstayingoutsideMaharashtrathenplaceofresidence = parsedExtraDetails.OOutSideMahaPlaceRes;
+const Placeofemploymentenrolmentforschemeifany = parsedExtraDetails.OPlaceOfEmployment;
+const WhetherApplicantIsBeneficiaryOfGovernmentSchemeinOtherDistrict = _OWhetherApplicantIsBeneficiaryOfGovScheme;
+const PolicyDistrictCode = _OOtherDistrictyes;
+const PolicySubDistrictCode = _OYesOtherDistrictTaluka;
+const PolicyVillageCode = _OLabelYesOtherVillage;
+const PolicyPinCode = parsedExtraDetails.OYesOtherPinCode;
+const ListApplicantFamilyResidantDetailsModel = _ListApplicantFamilyResidantDetailsModel;
+const Reason = flowsOutput.MIGRATION.OReason;
+
+
+const saveApiPayload = {
+  LangID: LangID,
+  ServiceId: "1253", //constant
+  ServiceName: ServiceName, //constant
+  UserID: "224a14e9-33e8-4c5a-8d48-fe20d26769f6", ///...bot level
+  DivisionId: "6", //constant
+  CertificateType: CertificateType, //constant 
+  CertificateTypeCode: CertificateTypeCode, //constant Not constant
+  ApplicantSalutation: ApplicantSalutation,
+  ApplicantNameEnglish: ApplicantNameEnglish,
+  ApplicantNameMarathi: ApplicantNameMarathi,
+  ApplicantFatherSalutation: ApplicantFatherSalutation,
+  ApplicantFatherNameEnglish: ApplicantFatherNameEnglish,
+  ApplicantFatherNameMarathi: ApplicantFatherNameMarathi,
+  ApplicantDOB: ApplicantDOB,
+  ApplicantAge: ApplicantAge,
+  ApplicantMobileNo: ApplicantMobileNo,
+  ApplicantGender: ApplicantGender,
+  ApplicantEmailID: ApplicantEmailID,
+  ApplicantOccupation: ApplicantOccupation,
+  ApplicantNationality: ApplicantNationality, //constant
+  ResidingAtPresentAddressSince: ResidingAtPresentAddressSince, //need to handle in basic screen - Dependency
+  ApplicantAddress: ApplicantAddress,
+  ApplicantBuilding: ApplicantBuilding,
+  ApplicantSection: ApplicantSection,
+  ApplicantStreet: ApplicantStreet,
+  ApplicantLandmark: ApplicantLandmark,
+  ApplicantStateCode: ApplicantStateCode, //constant
+  ApplicantDistrictCode: ApplicantDistrictCode,
+  ApplicantSubDistrictCode: ApplicantSubDistrictCode,
+  ApplicantVillageCode: ApplicantVillageCode,
+  ApplicantPinCode: ApplicantPinCode,
+  BeneficiaryResidingCurrentAddress: BeneficiaryResidingCurrentAddress, //Name.... need to handle in beneficiary
+  ApplicantResidingMaharashtra: ApplicantResidingMaharashtra,
+  ApplicantRelationWithBeneficiary: ApplicantRelationWithBeneficiary,
+  BeneficiarySalutation: BeneficiarySalutation,
+  BeneficiaryName: BeneficiaryName,
+  BeneficiaryDOB: BeneficiaryDOB,
+  BeneficiaryMobile: BeneficiaryMobile ?? "",
+  PresentAddressSameAsAbove: PresentAddressSameAsAbove, //.Name
+  PresentAddress: PresentAddress,
+  PresentBuilding: PresentBuilding,
+  PresentSection: PresentSection,
+  PresentStreet: PresentStreet,
+  PresentLandmark: PresentLandmark,
+  PresentDistrictCode: PresentDistrictCode,
+  PresentSubDistrictCode: PresentSubDistrictCode,
+  PresentVillageCode: PresentVillageCode,
+  PresentPinCode: PresentPinCode,
+  BirthAddressSameAsAbove: BirthAddressSameAsAbove, //.Name
+  BirthAddress: BirthAddress,
+  BirthBuilding: BirthBuilding ?? "",
+  BirthSection: BirthSection ?? "",
+  BirthStreet: BirthStreet ?? "",
+  BirthStateCode: BirthStateCode,
+  BirthDistrictCode: BirthDistrictCode,
+  BirthSubDistrictCode: BirthSubDistrictCode,
+  BirthVillageCode: BirthVillageCode,
+  BirthPinCode: BirthPinCode,
+  ListEducationDetailsofBeneficiaryModel:
+    ListEducationDetailsofBeneficiaryModel,
+  //done
+
+  IsBeneficiaryaMarriedWoman: IsBeneficiaryaMarriedWoman,
+  MaidenName: MaidenName ?? "",
+  MarriageDate: MarriageDate,
+  AddressBeforeMarriageSameasSbove: AddressBeforeMarriageSameasSbove,
+  BeforeMarriageAddress: BeforeMarriageAddress, //These all about fill out
+  BeforeMarriageBuilding: BeforeMarriageBuilding ?? "",
+  BeforeMarriageSection: BeforeMarriageSection ?? "",
+  BeforeMarriageStreet: BeforeMarriageStreet ?? "",
+  BeforeMarriageLandmark: BeforeMarriageLandmark ?? "",
+  BeforeMarriageDistrictCode: BeforeMarriageDistrictCode,
+  BeforeMarriageSubDistrictCode: BeforeMarriageSubDistrictCode,
+  BeforeMarriageVillageCode: BeforeMarriageVillageCode,
+  BeforeMarriagePinCode: BeforeMarriagePinCode,
+  PlacewhereMarriageWasRegistered: PlacewhereMarriageWasRegistered ?? "",
+  PostMarriageNameAlongWithHusbandName:
+    PostMarriageNameAlongWithHusbandName ?? "",
+  ResidingPeriodBeforMarriageAndNoofYear:
+    ResidingPeriodBeforMarriageAndNoofYear,
+  PlaceofBirthofHusband: PlaceofBirthofHusband ?? "",
+  DateofBirthofHusband: DateofBirthofHusband,
+  OccupationofHusband: OccupationofHusband,
+  HusbandName: HusbandName ?? "",
+  AddressAfterMarriageSameasAbove: AddressAfterMarriageSameasAbove, //.Name
+  AfterMarriageAddress: AfterMarriageAddress ?? "",
+  AfterMarriageBuilding: AfterMarriageBuilding ?? "", //These all about After Married woman
+  AfterMarriageSection: AfterMarriageSection ?? "",
+  AfterMarriageStreet: AfterMarriageStreet ?? "",
+  AfterMarriageLandmark: AfterMarriageLandmark ?? "",
+  AfterMarriageDistrictCode: AfterMarriageDistrictCode,
+  AfterMarriageSubDistrictCode: AfterMarriageSubDistrictCode,
+  AfterMarriageVillageCode: AfterMarriageVillageCode ?? "",
+  AfterMarriagePinCode: AfterMarriagePinCode,
+  HasBeneficiaryMigratedFromDifferentState: HasBeneficiaryMigratedFromDifferentState, //.Value These all about Migration Screen
+  YearsOfResidenceInMaharashtra: YearsOfResidenceInMaharashtra, //.Name
+  FamilyNativePlaceBeforeMigrationToMaharashtra: FamilyNativePlaceBeforeMigrationToMaharashtra ?? "",
+  ReasonforMigration: ReasonforMigration ?? "",
+  //done
+
+  ListMigrationDetailsofBeneficiaryModel:ListMigrationDetailsofBeneficiaryModel,
+  DetailsOfMovablePropertyBelongToApplicantFatherhusbandInMaharashtra:DetailsOfMovablePropertyBelongToApplicantFatherhusbandInMaharashtra, //.Name
+  PropertyAddress: PropertyAddress ?? "",
+  PropertyBuilding: PropertyBuilding ?? "",
+  PropertySection: PropertySection ?? "",
+  PropertyStreet: PropertyStreet ?? "",
+  PropertyLandmark: PropertyLandmark ?? "",
+  PropertyDistrictCode: PropertyDistrictCode ?? "",
+  PropertySubDistrictCode: PropertySubDistrictCode ?? "",
+  PropertyVillageCode: PropertyVillageCode ?? "",
+  PropertyPinCode: PropertyPinCode ?? "",
+  PropertyHolderRelationwithBeneficiary:PropertyHolderRelationwithBeneficiary ?? "",
+  PropertyDetail: PropertyDetail ?? "",
+  Beneficiaryfatherhusbandplaceofresidence:Beneficiaryfatherhusbandplaceofresidence ?? "",
+  Atthetimeofbirthofthebeneficiaryplaceofresidenceoffather:Atthetimeofbirthofthebeneficiaryplaceofresidenceoffather ?? "",
+  IfBeneficiaryfatherhusbandisstayingoutsideMaharashtrathenplaceofresidence:IfBeneficiaryfatherhusbandisstayingoutsideMaharashtrathenplaceofresidence ?? "",
+  Placeofemploymentenrolmentforschemeifany:Placeofemploymentenrolmentforschemeifany ?? "",
+  WhetherApplicantIsBeneficiaryOfGovernmentSchemeinOtherDistrict:WhetherApplicantIsBeneficiaryOfGovernmentSchemeinOtherDistrict ?? "",
+  PolicyDistrictCode: PolicyDistrictCode ?? "",
+  PolicySubDistrictCode: PolicySubDistrictCode ?? "",
+  PolicyVillageCode: PolicyVillageCode ?? "",
+  PolicyPinCode: PolicyPinCode ?? "",
+
+  // done
+  ListApplicantFamilyResidantDetailsModel:ListApplicantFamilyResidantDetailsModel,
+  Reason: Reason,
+  CreatedBy: "224a14e9-33e8-4c5a-8d48-fe20d26769f6",
 };
+
+
+// {{saveApiPayload}} = saveApiPayload;
+// {{TOKEN}} = `Bearer ${TOKEN}`;
+
+
+
+console.log(saveApiPayload)
